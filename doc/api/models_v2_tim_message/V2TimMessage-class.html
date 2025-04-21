@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the V2TimMessage class from the v2_tim_message library, for the Dart programming language.">
+  <title>V2TimMessage class - v2_tim_message library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../models_v2_tim_message/models_v2_tim_message-library.html">models&#47;v2_tim_message.dart</a></li>
+    <li class="self-crumb">V2TimMessage class</li>
+  </ol>
+  <div class="self-name">V2TimMessage</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="models_v2_tim_message&#47;models_v2_tim_message-library-sidebar.html"
+    data-below-sidebar="models_v2_tim_message&#47;V2TimMessage-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">V2TimMessage</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>V2TimMessageReceipt</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="V2TimMessage" class="callable">
+          <span class="name"><a href="../models_v2_tim_message/V2TimMessage/V2TimMessage.html">V2TimMessage</a></span><span class="signature">(<span class="parameter" id="-param-msgID">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">msgID</span>, </span><span class="parameter" id="-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timestamp</span>, </span><span class="parameter" id="-param-progress"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">progress</span>, </span><span class="parameter" id="-param-sender"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span><span class="parameter" id="-param-nickName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">nickName</span>, </span><span class="parameter" id="-param-friendRemark"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">friendRemark</span>, </span><span class="parameter" id="-param-faceUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">faceUrl</span>, </span><span class="parameter" id="-param-nameCard"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">nameCard</span>, </span><span class="parameter" id="-param-groupID"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupID</span>, </span><span class="parameter" id="-param-userID"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userID</span>, </span><span class="parameter" id="-param-status"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">status</span>, </span><span class="parameter" id="-param-elemType"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">elemType</span>, </span><span class="parameter" id="-param-textElem"><span class="type-annotation"><a href="../models_v2_tim_text_elem/V2TimTextElem-class.html">V2TimTextElem</a>?</span> <span class="parameter-name">textElem</span>, </span><span class="parameter" id="-param-customElem"><span class="type-annotation"><a href="../models_v2_tim_custom_elem/V2TimCustomElem-class.html">V2TimCustomElem</a>?</span> <span class="parameter-name">customElem</span>, </span><span class="parameter" id="-param-imageElem"><span class="type-annotation"><a href="../models_v2_tim_image_elem/V2TimImageElem-class.html">V2TimImageElem</a>?</span> <span class="parameter-name">imageElem</span>, </span><span class="parameter" id="-param-soundElem"><span class="type-annotation"><a href="../models_v2_tim_sound_elem/V2TimSoundElem-class.html">V2TimSoundElem</a>?</span> <span class="parameter-name">soundElem</span>, </span><span class="parameter" id="-param-videoElem"><span class="type-annotation"><a href="../models_v2_tim_video_elem/V2TimVideoElem-class.html">V2TimVideoElem</a>?</span> <span class="parameter-name">videoElem</span>, </span><span class="parameter" id="-param-fileElem"><span class="type-annotation"><a href="../models_v2_tim_file_elem/V2TimFileElem-class.html">V2TimFileElem</a>?</span> <span class="parameter-name">fileElem</span>, </span><span class="parameter" id="-param-locationElem"><span class="type-annotation"><a href="../models_v2_tim_location_elem/V2TimLocationElem-class.html">V2TimLocationElem</a>?</span> <span class="parameter-name">locationElem</span>, </span><span class="parameter" id="-param-faceElem"><span class="type-annotation"><a href="../models_v2_tim_face_elem/V2TimFaceElem-class.html">V2TimFaceElem</a>?</span> <span class="parameter-name">faceElem</span>, </span><span class="parameter" id="-param-groupTipsElem"><span class="type-annotation"><a href="../models_v2_tim_group_tips_elem/V2TimGroupTipsElem-class.html">V2TimGroupTipsElem</a>?</span> <span class="parameter-name">groupTipsElem</span>, </span><span class="parameter" id="-param-mergerElem"><span class="type-annotation"><a href="../models_v2_tim_merger_elem/V2TimMergerElem-class.html">V2TimMergerElem</a>?</span> <span class="parameter-name">mergerElem</span>, </span><span class="parameter" id="-param-localCustomData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">localCustomData</span>, </span><span class="parameter" id="-param-localCustomInt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">localCustomInt</span>, </span><span class="parameter" id="-param-cloudCustomData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cloudCustomData</span>, </span><span class="parameter" id="-param-isSelf"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSelf</span>, </span><span class="parameter" id="-param-isRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isRead</span>, </span><span class="parameter" id="-param-isPeerRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isPeerRead</span>, </span><span class="parameter" id="-param-priority"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">priority</span>, </span><span class="parameter" id="-param-offlinePushInfo"><span class="type-annotation"><a href="../enum_offlinePushInfo/OfflinePushInfo-class.html">OfflinePushInfo</a>?</span> <span class="parameter-name">offlinePushInfo</span>, </span><span class="parameter" id="-param-groupAtUserList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">groupAtUserList</span>, </span><span class="parameter" id="-param-seq"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">seq</span>, </span><span class="parameter" id="-param-random"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">random</span>, </span><span class="parameter" id="-param-isExcludedFromUnreadCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isExcludedFromUnreadCount</span>, </span><span class="parameter" id="-param-isExcludedFromLastMessage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isExcludedFromLastMessage</span>, </span><span class="parameter" id="-param-isSupportMessageExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSupportMessageExtension</span>, </span><span class="parameter" id="-param-messageFromWeb"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">messageFromWeb</span>, </span><span class="parameter" id="-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">id</span>, </span><span class="parameter" id="-param-needReadReceipt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">needReadReceipt</span>}</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="V2TimMessage.fromJson" class="callable">
+          <span class="name"><a href="../models_v2_tim_message/V2TimMessage/V2TimMessage.fromJson.html">V2TimMessage.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">json</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="cloudCustomData" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/cloudCustomData.html">cloudCustomData</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息的云端自定义字段（string类型）
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="customElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/customElem.html">customElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_custom_elem/V2TimCustomElem-class.html">V2TimCustomElem</a>?</span>
+  
+
+</dt>
+<dd>
+  自定义消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elemList" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/elemList.html">elemList</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span>
+  
+
+</dt>
+<dd>
+  消息元素列表
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elemType" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/elemType.html">elemType</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  消息类型 文本消息 图片消息等
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="faceElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/faceElem.html">faceElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_face_elem/V2TimFaceElem-class.html">V2TimFaceElem</a>?</span>
+  
+
+</dt>
+<dd>
+  表情消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="faceUrl" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/faceUrl.html">faceUrl</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  发送者头像
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="fileElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/fileElem.html">fileElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_file_elem/V2TimFileElem-class.html">V2TimFileElem</a>?</span>
+  
+
+</dt>
+<dd>
+  文件消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="friendRemark" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/friendRemark.html">friendRemark</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息发送者好友备注，只有当与消息发送者有好友关系，且给好友设置过备注，才会有值
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="groupAtUserList" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/groupAtUserList.html">groupAtUserList</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  群@消息@数组
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="groupID" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/groupID.html">groupID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  群ID，只有群消息才会有
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="groupReportElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/groupReportElem.html">groupReportElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem-class.html">V2TimGroupReportElem</a>?</span>
+  
+
+</dt>
+<dd>
+  群系统通知消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="groupTipsElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/groupTipsElem.html">groupTipsElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_group_tips_elem/V2TimGroupTipsElem-class.html">V2TimGroupTipsElem</a>?</span>
+  
+
+</dt>
+<dd>
+  群提示消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="hasRiskContent" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/hasRiskContent.html">hasRiskContent</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否有风险内容
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="id" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/id.html">id</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息id，仅在 createXXXMessage后sendMessage调用异步返回后有效
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="imageElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/imageElem.html">imageElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_image_elem/V2TimImageElem-class.html">V2TimImageElem</a>?</span>
+  
+
+</dt>
+<dd>
+  图片消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isBroadcastMessage" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isBroadcastMessage.html">isBroadcastMessage</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否是广播消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isDisableCloudMessagePostHook" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isDisableCloudMessagePostHook.html">isDisableCloudMessagePostHook</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否禁用消息发送后云端回调
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isDisableCloudMessagePreHook" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isDisableCloudMessagePreHook.html">isDisableCloudMessagePreHook</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否禁用消息发送前云端回调
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isExcludedFromContentModeration" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isExcludedFromContentModeration.html">isExcludedFromContentModeration</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否本地不打击
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isExcludedFromLastMessage" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isExcludedFromLastMessage.html">isExcludedFromLastMessage</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否计入会话lastMessage
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isExcludedFromUnreadCount" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isExcludedFromUnreadCount.html">isExcludedFromUnreadCount</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否计入会话未读数
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isForwardMessage" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isForwardMessage.html">isForwardMessage</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  如果需要转发一条消息，不能直接调用 sendMessage 接口发送原消息，该字段设置为 true 再发送。
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isOnlineOnly" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isOnlineOnly.html">isOnlineOnly</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否在线消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isPeerRead" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isPeerRead.html">isPeerRead</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否接收方已读，仅c2c消息有效
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isRead" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isRead.html">isRead</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否自己已读
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isSelf" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isSelf.html">isSelf</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否是当前登录用户的消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isSupportMessageExtension" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/isSupportMessageExtension.html">isSupportMessageExtension</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  消息是否支持消息扩展
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localCustomData" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/localCustomData.html">localCustomData</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息的本地自定义字段（string类型），只存在于本地，删除应用后丢失
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="localCustomInt" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/localCustomInt.html">localCustomInt</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  消息的本地自定义字段（int 类型），只存在于本地，删除应用后丢失
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="locationElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/locationElem.html">locationElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_location_elem/V2TimLocationElem-class.html">V2TimLocationElem</a>?</span>
+  
+
+</dt>
+<dd>
+  位置消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="mergerElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/mergerElem.html">mergerElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_merger_elem/V2TimMergerElem-class.html">V2TimMergerElem</a>?</span>
+  
+
+</dt>
+<dd>
+  合并消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="messageConvID" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/messageConvID.html">messageConvID</a></span>
+  <span class="signature">&#8594; dynamic</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="messageConvType" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/messageConvType.html">messageConvType</a></span>
+  <span class="signature">&#8594; dynamic</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="messageFromWeb" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/messageFromWeb.html">messageFromWeb</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  来自web的消息，仅在flutter for web时有用
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="msgID" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/msgID.html">msgID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息ID
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="nameCard" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/nameCard.html">nameCard</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  发送者备注
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="needReadReceipt" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/needReadReceipt.html">needReadReceipt</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  是否要群消息已读回执
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="nickName" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/nickName.html">nickName</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息发送者昵称
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="offlinePushInfo" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/offlinePushInfo.html">offlinePushInfo</a></span>
+  <span class="signature">&#8596; <a href="../enum_offlinePushInfo/OfflinePushInfo-class.html">OfflinePushInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  离线推送相关配置
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="priority" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/priority.html">priority</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  消息优先级
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="progress" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/progress.html">progress</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  消息发送进度，只有多媒体消息才会有，其余消息为100
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="random" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/random.html">random</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  合并消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="revokeReason" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/revokeReason.html">revokeReason</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息撤回原因
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="revokerInfo" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/revokerInfo.html">revokerInfo</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_user_full_info/V2TimUserFullInfo-class.html">V2TimUserFullInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sender" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/sender.html">sender</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息发送者
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="senderGroupMemberInfo" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/senderGroupMemberInfo.html">senderGroupMemberInfo</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_group_member_info/V2TimGroupMemberInfo-class.html">V2TimGroupMemberInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  消息发送者在群里面的信息，只有在群会话有效。目前仅能获取字段 kTIMGroupMemberInfoIdentifier、kTIMGroupMemberInfoNameCard 其他的字段建议通过 TIMGroupGetMemberInfoList 接口获取
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="senderProfile" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/senderProfile.html">senderProfile</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_user_info/V2TimUserInfo-class.html">V2TimUserInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  ****************** C 接口新增 ******************
+消息的发送者的用户资料
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="seq" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/seq.html">seq</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息序列号
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="soundElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/soundElem.html">soundElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_sound_elem/V2TimSoundElem-class.html">V2TimSoundElem</a>?</span>
+  
+
+</dt>
+<dd>
+  语音消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="status" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/status.html">status</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  消息状态 发送中 成功 失败等
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="targetGroupMemberList" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/targetGroupMemberList.html">targetGroupMemberList</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  指定群消息接收成员（定向消息）；不支持群 @ 消息设置，不支持社群（Community）和直播群（AVChatRoom）消息设置；该字段设置后，消息会不计入会话未读数。
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="textElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/textElem.html">textElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_text_elem/V2TimTextElem-class.html">V2TimTextElem</a>?</span>
+  
+
+</dt>
+<dd>
+  文本消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="timestamp" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/timestamp.html">timestamp</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  消息时间戳
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="userID" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/userID.html">userID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  消息接受者用户ID
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="videoElem" class="property">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/videoElem.html">videoElem</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_video_elem/V2TimVideoElem-class.html">V2TimVideoElem</a>?</span>
+  
+
+</dt>
+<dd>
+  视频消息
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toJson" class="callable">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/toJson.html">toJson</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toLogString" class="callable">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/toLogString.html">toLogString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../models_v2_tim_message/V2TimMessage/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="createIDPrefix" class="constant">
+    <span class="name "><a href="../models_v2_tim_message/V2TimMessage/createIDPrefix-constant.html">createIDPrefix</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../models_v2_tim_message/models_v2_tim_message-library.html">v2_tim_message</a></li>
+    <li class="self-crumb">V2TimMessage class</li>
+</ol>
+
+
+    <h5>v2_tim_message library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

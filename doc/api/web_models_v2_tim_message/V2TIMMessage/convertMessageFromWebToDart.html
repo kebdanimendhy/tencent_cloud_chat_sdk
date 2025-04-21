@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the convertMessageFromWebToDart method from the V2TIMMessage class, for the Dart programming language.">
+  <title>convertMessageFromWebToDart method - V2TIMMessage class - v2_tim_message library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../web_models_v2_tim_message/web_models_v2_tim_message-library.html">web&#47;models&#47;v2_tim_message.dart</a></li>
+    <li><a href="../../web_models_v2_tim_message/V2TIMMessage-class.html">V2TIMMessage</a></li>
+    <li class="self-crumb">convertMessageFromWebToDart static method</li>
+  </ol>
+  <div class="self-name">convertMessageFromWebToDart</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="web_models_v2_tim_message&#47;V2TIMMessage-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">convertMessageFromWebToDart</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span></span>
+<span class="name ">convertMessageFromWebToDart</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="convertMessageFromWebToDart-param-jsMessage"><span class="type-annotation">dynamic</span> <span class="parameter-name">jsMessage</span>, </span></li>
+<li><span class="parameter" id="convertMessageFromWebToDart-param-isFromDownloadMergerMessage">{<span class="type-annotation">dynamic</span> <span class="parameter-name">isFromDownloadMergerMessage</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Future&lt;Map&lt;String, dynamic&gt;&gt; convertMessageFromWebToDart(jsMessage,
+    {isFromDownloadMergerMessage = false}) async {
+  final message = jsMessage is Map ? jsMessage : jsToMap(jsMessage);
+  if (message.isEmpty) {
+    return {};
+  }
+  final elementType = MsgType.convertMsgType(message[&#39;type&#39;]);
+  final formatedMsg = &lt;String, dynamic&gt;{
+    &quot;msgID&quot;: message[&quot;ID&quot;] ?? &#39;&#39;,
+    &quot;timestamp&quot;: message[&quot;time&quot;],
+    &quot;progress&quot;: 100,
+    &quot;sender&quot;: message[&quot;from&quot;] ?? message[&quot;fromAccount&quot;] ?? &#39;&#39;,
+    &quot;nickName&quot;: message[&quot;nick&quot;] ?? &#39;&#39;,
+    &quot;friendRemark&quot;: &quot;&quot;,
+    &quot;faceUrl&quot;: message[&quot;avatar&quot;] ?? &#39;&#39;,
+    &quot;nameCard&quot;: message[&quot;nameCard&quot;] ?? &#39;&#39;,
+    &quot;groupID&quot;: message[&quot;conversationType&quot;] == &quot;GROUP&quot; ? message[&quot;to&quot;] : null,
+    &quot;userID&quot;: message[&quot;conversationType&quot;] == &quot;C2C&quot;
+        ? message[&quot;conversationID&quot;].replaceAll(&quot;C2C&quot;, &quot;&quot;)
+        : null,
+    &quot;status&quot;: isFromDownloadMergerMessage
+        ? MessageStatus.V2TIM_MSG_STATUS_SEND_SUCC
+        : MessageStatusWeb.convertMessageStatus(message),
+    &quot;elemType&quot;: elementType,
+    &quot;localCustomData&quot;: &quot;&quot;,
+    &quot;localCustomInt&quot;: 0,
+    &quot;cloudCustomData&quot;: message[&quot;cloudCustomData&quot;] ?? &#39;&#39;,
+    &quot;isSelf&quot;: isFromDownloadMergerMessage
+        ? V2TIMManager.loginUserID == message[&#39;messageSender&#39;]
+        : (message[&quot;flow&quot;] == &quot;out&quot; ? true : false),
+    &quot;isRead&quot;: message[&quot;isRead&quot;] ?? false,
+    &quot;isPeerRead&quot;: message[&quot;isPeerRead&quot;] ?? false,
+    &quot;priority&quot;: isFromDownloadMergerMessage
+        ? MessagePriority.V2TIM_PRIORITY_DEFAULT
+        : MessagePriorityWeb.convertMsgPriority(message[&quot;priority&quot;]),
+    &quot;groupAtUserList&quot;:
+        isFromDownloadMergerMessage ? [] : message[&quot;atUserList&quot;],
+    &quot;seq&quot;: isFromDownloadMergerMessage
+        ? message[&#39;clientSequence&#39;].toString()
+        : message[&quot;sequence&quot;].toString(),
+    &quot;random&quot;: isFromDownloadMergerMessage
+        ? message[&#39;messageRandom&#39;]
+        : message[&quot;random&quot;],
+    &quot;isExcludedFromUnreadCount&quot;: false,
+    &quot;messageFromWeb&quot;: isFromDownloadMergerMessage ? &#39;&#39; : stringify(jsMessage),
+    &quot;needReadReceipt&quot;: message[&quot;needReadReceipt&quot;] ?? false
+  };
+
+  final messagePayload = jsToMap(message[&quot;payload&quot;]);
+
+  &#47;&#47; 文本消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_TEXT) {
+    final textElem = V2TimTextElem(text: messagePayload[&#39;text&#39;]).toJson();
+    formatedMsg[&#39;textElem&#39;] = textElem;
+  }
+
+  &#47;&#47; 音频消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_SOUND) {
+    final soundElem = V2TimSoundElem(
+      localUrl: messagePayload[&#39;url&#39;],
+      url: messagePayload[&#39;remoteAudioUrl&#39;],
+      dataSize: messagePayload[&#39;size&#39;],
+      duration: messagePayload[&#39;second&#39;],
+      UUID: messagePayload[&#39;uuid&#39;],
+    ).toJson();
+    formatedMsg[&#39;soundElem&#39;] = soundElem;
+  }
+
+  &#47;&#47; 自定义消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_CUSTOM) {
+    final customElem = V2TimCustomElem(
+            data: messagePayload[&#39;data&#39;],
+            desc: messagePayload[&#39;discription&#39;],
+            extension: messagePayload[&#39;extension&#39;])
+        .toJson();
+    formatedMsg[&#39;customElem&#39;] = customElem;
+  }
+
+  &#47;&#47; 群系统通知消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_GROUP_TIPS) {
+    final groupTipsElement = await convertGroupTipsMessage(
+        message as Map&lt;String, dynamic&gt;,
+        groupID: formatedMsg[&#39;groupID&#39;]);
+    formatedMsg[&#39;groupTipsElem&#39;] = groupTipsElement?.toJson();
+  }
+
+  &#47;&#47; 图片消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_IMAGE) {
+    final imageInfoArray = messagePayload[&#39;imageInfoArray&#39;] as List;
+    final imagePath = jsToMap(imageInfoArray[0])[&#39;url&#39;];
+    final uuid = messagePayload[&#39;uuid&#39;];
+    final imageList = imageInfoArray.map((e) {
+      final element = jsToMap(e);
+      return V2TimImage(
+          type: element[&#39;type&#39;],
+          height: element[&#39;height&#39;],
+          width: element[&#39;width&#39;],
+          size: element[&#39;size&#39;],
+          uuid: uuid,
+          url: element[&#39;imageUrl&#39;]);
+    }).toList();
+    final imageElem = V2TimImageElem(path: imagePath, imageList: imageList);
+    formatedMsg[&#39;imageElem&#39;] = imageElem.toJson();
+  }
+
+  &#47;&#47;视频消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_VIDEO) {
+    final videoElem = V2TimVideoElem(
+        videoPath: messagePayload[&#39;videoUrl&#39;],
+        duration: int.tryParse(messagePayload[&#39;videoSecond&#39;].toString()),
+        UUID: messagePayload[&#39;videoUUID&#39;],
+        snapshotPath: messagePayload[&#39;thumbUrl&#39;],
+        snapshotUUID: messagePayload[&#39;thumbUUID&#39;],
+        snapshotSize: messagePayload[&#39;thumbSize&#39;],
+        snapshotWidth: messagePayload[&#39;thumbWidth&#39;],
+        snapshotHeight: messagePayload[&#39;thumbHeight&#39;],
+        snapshotUrl: messagePayload[&#39;thumbUrl&#39;],
+        videoUrl: messagePayload[&#39;remoteVideoUrl&#39;],
+        videoSize: messagePayload[&#39;videoSize&#39;]);
+    formatedMsg[&#39;videoElem&#39;] = videoElem.toJson();
+  }
+
+  &#47;&#47; 文件消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_FILE) {
+    final fileElem = V2TimFileElem(
+            path: messagePayload[&#39;fileUrl&#39;],
+            fileName: messagePayload[&#39;fileName&#39;],
+            UUID: messagePayload[&#39;uuid&#39;],
+            fileSize: messagePayload[&#39;fileSize&#39;])
+        .toJson();
+    formatedMsg[&#39;fileElem&#39;] = fileElem;
+  }
+
+  &#47;&#47; 地理位置消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_LOCATION) {
+    final locationElem = V2TimLocationElem(
+        desc: messagePayload[&#39;description&#39;],
+        longitude: messagePayload[&#39;longitude&#39;],
+        latitude: messagePayload[&#39;latitude&#39;]);
+    formatedMsg[&#39;locationElem&#39;] = locationElem.toJson();
+  }
+
+  List&lt;String&gt; formateList(List&lt;dynamic&gt; list) =&gt;
+      list.map((e) =&gt; e.toString()).toList();
+
+  &#47;&#47; 合并消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_MERGER) {
+    final mergerElem = V2TimMergerElem(
+        title: messagePayload[&#39;title&#39;],
+        abstractList: formateList(messagePayload[&#39;abstractList&#39;]),
+        isLayersOverLimit: messagePayload[&#39;layersOverLimit&#39;]);
+    formatedMsg[&#39;mergerElem&#39;] = mergerElem.toJson();
+  }
+
+  &#47;&#47; 表情消息
+  if (elementType == MessageElemType.V2TIM_ELEM_TYPE_FACE) {
+    final faceMessage = V2TimFaceElem(
+        index: messagePayload[&#39;index&#39;], data: messagePayload[&#39;data&#39;]);
+    formatedMsg[&#39;faceElem&#39;] = faceMessage.toJson();
+  }
+
+  return formatedMsg;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../web_models_v2_tim_message/web_models_v2_tim_message-library.html">v2_tim_message</a></li>
+    <li><a href="../../web_models_v2_tim_message/V2TIMMessage-class.html">V2TIMMessage</a></li>
+    <li class="self-crumb">convertMessageFromWebToDart static method</li>
+</ol>
+
+
+    <h5>V2TIMMessage class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

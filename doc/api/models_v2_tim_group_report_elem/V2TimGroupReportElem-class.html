@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the V2TimGroupReportElem class from the v2_tim_group_report_elem library, for the Dart programming language.">
+  <title>V2TimGroupReportElem class - v2_tim_group_report_elem library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../models_v2_tim_group_report_elem/models_v2_tim_group_report_elem-library.html">models&#47;v2_tim_group_report_elem.dart</a></li>
+    <li class="self-crumb">V2TimGroupReportElem class</li>
+  </ol>
+  <div class="self-name">V2TimGroupReportElem</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="models_v2_tim_group_report_elem&#47;models_v2_tim_group_report_elem-library-sidebar.html"
+    data-below-sidebar="models_v2_tim_group_report_elem&#47;V2TimGroupReportElem-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">V2TimGroupReportElem</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>V2TimGroupReportElem</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../models_v2_tim_elem/V2TIMElem-class.html">V2TIMElem</a></li>
+      <li>V2TimGroupReportElem</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="V2TimGroupReportElem" class="callable">
+          <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/V2TimGroupReportElem.html">V2TimGroupReportElem</a></span><span class="signature">(<span class="parameter" id="-param-groupID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupID</span>, </span><span class="parameter" id="-param-type"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="-param-opUserID"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">opUserID</span>, </span><span class="parameter" id="-param-opUserInfo"><span class="type-annotation"><a href="../models_v2_tim_user_full_info/V2TimUserFullInfo-class.html">V2TimUserFullInfo</a>?</span> <span class="parameter-name">opUserInfo</span>, </span><span class="parameter" id="-param-opMemberInfo"><span class="type-annotation"><a href="../models_v2_tim_group_member_info/V2TimGroupMemberInfo-class.html">V2TimGroupMemberInfo</a>?</span> <span class="parameter-name">opMemberInfo</span>, </span><span class="parameter" id="-param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="-param-customData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">customData</span>, </span><span class="parameter" id="-param-platform"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">platform</span>, </span><span class="parameter" id="-param-shutUpTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">shutUpTime</span>, </span><span class="parameter" id="-param-messageReceiveOpt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">messageReceiveOpt</span>}</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="V2TimGroupReportElem.fromJson" class="callable">
+          <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/V2TimGroupReportElem.fromJson.html">V2TimGroupReportElem.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">json</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="customData" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/customData.html">customData</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elemType" class="property inherited">
+  <span class="name"><a href="../models_v2_tim_elem/V2TIMElem/elemType.html">elemType</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="groupID" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/groupID.html">groupID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="messageReceiveOpt" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/messageReceiveOpt.html">messageReceiveOpt</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="nextElem" class="property inherited">
+  <span class="name"><a href="../models_v2_tim_elem/V2TIMElem/nextElem.html">nextElem</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="opMemberInfo" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/opMemberInfo.html">opMemberInfo</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_group_member_info/V2TimGroupMemberInfo-class.html">V2TimGroupMemberInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="opUserID" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/opUserID.html">opUserID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="opUserInfo" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/opUserInfo.html">opUserInfo</a></span>
+  <span class="signature">&#8596; <a href="../models_v2_tim_user_full_info/V2TimUserFullInfo-class.html">V2TimUserFullInfo</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="platform" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/platform.html">platform</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="reason" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/reason.html">reason</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shutUpTime" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/shutUpTime.html">shutUpTime</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/type.html">type</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toJson" class="callable">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/toJson.html">toJson</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toLogString" class="callable">
+  <span class="name"><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/toLogString.html">toLogString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="kTIMGroupReport_AddAccept" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_AddAccept-constant.html">kTIMGroupReport_AddAccept</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_AddRefuse" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_AddRefuse-constant.html">kTIMGroupReport_AddRefuse</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_AddRequest" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_AddRequest-constant.html">kTIMGroupReport_AddRequest</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_BannedFromGroup" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_BannedFromGroup-constant.html">kTIMGroupReport_BannedFromGroup</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_BeKicked" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_BeKicked-constant.html">kTIMGroupReport_BeKicked</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_CancelAdmin" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_CancelAdmin-constant.html">kTIMGroupReport_CancelAdmin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_Create" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_Create-constant.html">kTIMGroupReport_Create</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_Delete" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_Delete-constant.html">kTIMGroupReport_Delete</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_GrantAdmin" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_GrantAdmin-constant.html">kTIMGroupReport_GrantAdmin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_GroupMessageRead" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_GroupMessageRead-constant.html">kTIMGroupReport_GroupMessageRead</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_GroupMessageRecvOption" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_GroupMessageRecvOption-constant.html">kTIMGroupReport_GroupMessageRecvOption</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_GroupRecycle" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_GroupRecycle-constant.html">kTIMGroupReport_GroupRecycle</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_Invite" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_Invite-constant.html">kTIMGroupReport_Invite</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_InviteAccept" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_InviteAccept-constant.html">kTIMGroupReport_InviteAccept</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_InviteRefuse" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_InviteRefuse-constant.html">kTIMGroupReport_InviteRefuse</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_InviteReqToAdmin" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_InviteReqToAdmin-constant.html">kTIMGroupReport_InviteReqToAdmin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_InviteReqToInvitee" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_InviteReqToInvitee-constant.html">kTIMGroupReport_InviteReqToInvitee</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_None" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_None-constant.html">kTIMGroupReport_None</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_Quit" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_Quit-constant.html">kTIMGroupReport_Quit</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_ReadReport" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_ReadReport-constant.html">kTIMGroupReport_ReadReport</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_ShutUpMember" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_ShutUpMember-constant.html">kTIMGroupReport_ShutUpMember</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_TopicCreate" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_TopicCreate-constant.html">kTIMGroupReport_TopicCreate</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_TopicDelete" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_TopicDelete-constant.html">kTIMGroupReport_TopicDelete</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_UnbannedFromGroup" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_UnbannedFromGroup-constant.html">kTIMGroupReport_UnbannedFromGroup</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="kTIMGroupReport_UserDefine" class="constant">
+    <span class="name "><a href="../models_v2_tim_group_report_elem/V2TimGroupReportElem/kTIMGroupReport_UserDefine-constant.html">kTIMGroupReport_UserDefine</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../models_v2_tim_group_report_elem/models_v2_tim_group_report_elem-library.html">v2_tim_group_report_elem</a></li>
+    <li class="self-crumb">V2TimGroupReportElem class</li>
+</ol>
+
+
+    <h5>v2_tim_group_report_elem library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the V2TIMFriendshipManager class from the v2_tim_friendship_manager library, for the Dart programming language.">
+  <title>V2TIMFriendshipManager class - v2_tim_friendship_manager library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../manager_v2_tim_friendship_manager/manager_v2_tim_friendship_manager-library.html">manager&#47;v2_tim_friendship_manager.dart</a></li>
+    <li class="self-crumb">V2TIMFriendshipManager class</li>
+  </ol>
+  <div class="self-name">V2TIMFriendshipManager</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="manager_v2_tim_friendship_manager&#47;manager_v2_tim_friendship_manager-library-sidebar.html"
+    data-below-sidebar="manager_v2_tim_friendship_manager&#47;V2TIMFriendshipManager-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">V2TIMFriendshipManager</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>关系链接口，包含了好友的添加和删除，黑名单的添加和删除等逻辑</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendListener.html">setFriendListener</a>设置关系链监听器</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendList.html">getFriendList</a>获取好友列表</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendsInfo.html">getFriendsInfo</a>获取指定好友资料</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendInfo.html">setFriendInfo</a>设置指定好友资料</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addFriend.html">addFriend</a>添加好友</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFromFriendList.html">deleteFromFriendList</a>删除好友</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/checkFriend.html">checkFriend</a>检查指定用户的好友关系</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendApplicationList.html">getFriendApplicationList</a>获取好友申请列表</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/acceptFriendApplication.html">acceptFriendApplication</a>同意好友申请</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/refuseFriendApplication.html">refuseFriendApplication</a>拒绝好友申请</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendApplication.html">deleteFriendApplication</a>删除好友申请</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendApplicationRead.html">setFriendApplicationRead</a>设置好友申请已读</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addToBlackList.html">addToBlackList</a>添加用户到黑名单</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFromBlackList.html">deleteFromBlackList</a>把用户从黑名单中删除</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getBlackList.html">getBlackList</a>获取黑名单列表</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/createFriendGroup.html">createFriendGroup</a>新建好友分组</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendGroups.html">getFriendGroups</a>获取分组信息</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendGroup.html">deleteFriendGroup</a>删除好友分组</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/renameFriendGroup.html">renameFriendGroup</a>修改好友分组的名称</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addFriendsToFriendGroup.html">addFriendsToFriendGroup</a>添加好友到一个好友分组</p>
+<p><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendsFromFriendGroup.html">deleteFriendsFromFriendGroup</a>从好友分组中删除好友</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="V2TIMFriendshipManager" class="callable">
+          <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/V2TIMFriendshipManager.html">V2TIMFriendshipManager</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="acceptFriendApplication" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/acceptFriendApplication.html">acceptFriendApplication</a></span><span class="signature">(<wbr><span class="parameter" id="acceptFriendApplication-param-responseType">{<span>required</span> <span class="type-annotation"><a href="../enum_friend_response_type_enum/FriendResponseTypeEnum.html">FriendResponseTypeEnum</a></span> <span class="parameter-name">responseType</span>, </span><span class="parameter" id="acceptFriendApplication-param-type"><span>required</span> <span class="type-annotation"><a href="../enum_friend_application_type_enum/FriendApplicationTypeEnum.html">FriendApplicationTypeEnum</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="acceptFriendApplication-param-userID"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  同意好友申请
+  
+
+</dd>
+
+        <dt id="addFriend" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addFriend.html">addFriend</a></span><span class="signature">(<wbr><span class="parameter" id="addFriend-param-userID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userID</span>, </span><span class="parameter" id="addFriend-param-remark"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">remark</span>, </span><span class="parameter" id="addFriend-param-friendGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">friendGroup</span>, </span><span class="parameter" id="addFriend-param-addWording"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">addWording</span>, </span><span class="parameter" id="addFriend-param-addSource"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">addSource</span>, </span><span class="parameter" id="addFriend-param-addType"><span>required</span> <span class="type-annotation"><a href="../enum_friend_type_enum/FriendTypeEnum.html">FriendTypeEnum</a></span> <span class="parameter-name">addType</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  添加好友
+  
+
+</dd>
+
+        <dt id="addFriendListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addFriendListener.html">addFriendListener</a></span><span class="signature">(<wbr><span class="parameter" id="addFriendListener-param-listener">{<span>required</span> <span class="type-annotation"><a href="../enum_V2TimFriendshipListener/V2TimFriendshipListener-class.html">V2TimFriendshipListener</a></span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="addFriendsToFriendGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addFriendsToFriendGroup.html">addFriendsToFriendGroup</a></span><span class="signature">(<wbr><span class="parameter" id="addFriendsToFriendGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="addFriendsToFriendGroup-param-userIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  添加好友到一个好友分组
+  
+
+</dd>
+
+        <dt id="addToBlackList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/addToBlackList.html">addToBlackList</a></span><span class="signature">(<wbr><span class="parameter" id="addToBlackList-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  添加用户到黑名单
+  
+
+</dd>
+
+        <dt id="checkFollowType" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/checkFollowType.html">checkFollowType</a></span><span class="signature">(<wbr><span class="parameter" id="checkFollowType-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_follow_type_check_result/V2TimFollowTypeCheckResult-class.html">V2TimFollowTypeCheckResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  检查指定用户的关注类型
+  
+
+</dd>
+
+        <dt id="checkFriend" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/checkFriend.html">checkFriend</a></span><span class="signature">(<wbr><span class="parameter" id="checkFriend-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>, </span><span class="parameter" id="checkFriend-param-checkType"><span>required</span> <span class="type-annotation"><a href="../enum_friend_type_enum/FriendTypeEnum.html">FriendTypeEnum</a></span> <span class="parameter-name">checkType</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_check_result/V2TimFriendCheckResult-class.html">V2TimFriendCheckResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  检查指定用户的好友关系
+  
+
+</dd>
+
+        <dt id="createFriendGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/createFriendGroup.html">createFriendGroup</a></span><span class="signature">(<wbr><span class="parameter" id="createFriendGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="createFriendGroup-param-userIDList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  新建好友分组
+  
+
+</dd>
+
+        <dt id="deleteFriendApplication" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendApplication.html">deleteFriendApplication</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFriendApplication-param-type">{<span>required</span> <span class="type-annotation"><a href="../enum_friend_application_type_enum/FriendApplicationTypeEnum.html">FriendApplicationTypeEnum</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="deleteFriendApplication-param-userID"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  删除好友申请
+  
+
+</dd>
+
+        <dt id="deleteFriendGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendGroup.html">deleteFriendGroup</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFriendGroup-param-groupNameList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">groupNameList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  删除好友分组
+  
+
+</dd>
+
+        <dt id="deleteFriendsFromFriendGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFriendsFromFriendGroup.html">deleteFriendsFromFriendGroup</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFriendsFromFriendGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="deleteFriendsFromFriendGroup-param-userIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从好友分组中删除好友
+  
+
+</dd>
+
+        <dt id="deleteFromBlackList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFromBlackList.html">deleteFromBlackList</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFromBlackList-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  把用户从黑名单中删除
+  
+
+</dd>
+
+        <dt id="deleteFromFriendList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/deleteFromFriendList.html">deleteFromFriendList</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFromFriendList-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>, </span><span class="parameter" id="deleteFromFriendList-param-deleteType"><span>required</span> <span class="type-annotation"><a href="../enum_friend_type_enum/FriendTypeEnum.html">FriendTypeEnum</a></span> <span class="parameter-name">deleteType</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  删除好友
+  
+
+</dd>
+
+        <dt id="followUser" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/followUser.html">followUser</a></span><span class="signature">(<wbr><span class="parameter" id="followUser-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_follow_operation_result/V2TimFollowOperationResult-class.html">V2TimFollowOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  关注用户
+  
+
+</dd>
+
+        <dt id="getBlackList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getBlackList.html">getBlackList</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_info/V2TimFriendInfo-class.html">V2TimFriendInfo</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取黑名单列表
+  
+
+</dd>
+
+        <dt id="getFriendApplicationList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendApplicationList.html">getFriendApplicationList</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_application_result/V2TimFriendApplicationResult-class.html">V2TimFriendApplicationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取好友申请列表
+  
+
+</dd>
+
+        <dt id="getFriendGroups" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendGroups.html">getFriendGroups</a></span><span class="signature">(<wbr><span class="parameter" id="getFriendGroups-param-groupNameList">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">groupNameList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_group/V2TimFriendGroup-class.html">V2TimFriendGroup</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取分组信息
+  
+
+</dd>
+
+        <dt id="getFriendList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendList.html">getFriendList</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_info/V2TimFriendInfo-class.html">V2TimFriendInfo</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取好友列表
+  
+
+</dd>
+
+        <dt id="getFriendsInfo" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getFriendsInfo.html">getFriendsInfo</a></span><span class="signature">(<wbr><span class="parameter" id="getFriendsInfo-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_info_result/V2TimFriendInfoResult-class.html">V2TimFriendInfoResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取指定好友资料
+  
+
+</dd>
+
+        <dt id="getMutualFollowersList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getMutualFollowersList.html">getMutualFollowersList</a></span><span class="signature">(<wbr><span class="parameter" id="getMutualFollowersList-param-nextCursor">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nextCursor</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_user_info_result/V2TimUserInfoResult-class.html">V2TimUserInfoResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取我的互关列表
+  
+
+</dd>
+
+        <dt id="getMyFollowersList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getMyFollowersList.html">getMyFollowersList</a></span><span class="signature">(<wbr><span class="parameter" id="getMyFollowersList-param-nextCursor">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nextCursor</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_user_info_result/V2TimUserInfoResult-class.html">V2TimUserInfoResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取关注我的列表
+  
+
+</dd>
+
+        <dt id="getMyFollowingList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getMyFollowingList.html">getMyFollowingList</a></span><span class="signature">(<wbr><span class="parameter" id="getMyFollowingList-param-nextCursor">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nextCursor</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_user_info_result/V2TimUserInfoResult-class.html">V2TimUserInfoResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取我的关注列表
+  
+
+</dd>
+
+        <dt id="getOfficialAccountsInfo" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getOfficialAccountsInfo.html">getOfficialAccountsInfo</a></span><span class="signature">(<wbr><span class="parameter" id="getOfficialAccountsInfo-param-officialAccountIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">officialAccountIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_official_account_info_result/V2TimOfficialAccountInfoResult-class.html">V2TimOfficialAccountInfoResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取公众号列表
+  
+
+</dd>
+
+        <dt id="getUserFollowInfo" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/getUserFollowInfo.html">getUserFollowInfo</a></span><span class="signature">(<wbr><span class="parameter" id="getUserFollowInfo-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_follow_info/V2TimFollowInfo-class.html">V2TimFollowInfo</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取指定用户的 关注/粉丝/互关 数量信息
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="refuseFriendApplication" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/refuseFriendApplication.html">refuseFriendApplication</a></span><span class="signature">(<wbr><span class="parameter" id="refuseFriendApplication-param-type">{<span>required</span> <span class="type-annotation"><a href="../enum_friend_application_type_enum/FriendApplicationTypeEnum.html">FriendApplicationTypeEnum</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="refuseFriendApplication-param-userID"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_operation_result/V2TimFriendOperationResult-class.html">V2TimFriendOperationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  拒绝好友申请
+  
+
+</dd>
+
+        <dt id="removeFriendListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/removeFriendListener.html">removeFriendListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeFriendListener-param-listener">{<span class="type-annotation"><a href="../enum_V2TimFriendshipListener/V2TimFriendshipListener-class.html">V2TimFriendshipListener</a>?</span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="renameFriendGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/renameFriendGroup.html">renameFriendGroup</a></span><span class="signature">(<wbr><span class="parameter" id="renameFriendGroup-param-oldName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldName</span>, </span><span class="parameter" id="renameFriendGroup-param-newName"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newName</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  修改好友分组的名称
+  
+
+</dd>
+
+        <dt id="searchFriends" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/searchFriends.html">searchFriends</a></span><span class="signature">(<wbr><span class="parameter" id="searchFriends-param-searchParam">{<span>required</span> <span class="type-annotation"><a href="../models_v2_tim_friend_search_param/V2TimFriendSearchParam-class.html">V2TimFriendSearchParam</a></span> <span class="parameter-name">searchParam</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_friend_info_result/V2TimFriendInfoResult-class.html">V2TimFriendInfoResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  搜索好友
+  
+
+</dd>
+
+        <dt id="setFriendApplicationRead" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendApplicationRead.html">setFriendApplicationRead</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置好友申请已读
+  
+
+</dd>
+
+        <dt id="setFriendInfo" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendInfo.html">setFriendInfo</a></span><span class="signature">(<wbr><span class="parameter" id="setFriendInfo-param-userID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userID</span>, </span><span class="parameter" id="setFriendInfo-param-friendRemark"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">friendRemark</span>, </span><span class="parameter" id="setFriendInfo-param-friendCustomInfo"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">friendCustomInfo</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置指定好友资料
+  
+
+</dd>
+
+        <dt id="setFriendListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/setFriendListener.html">setFriendListener</a></span><span class="signature">(<wbr><span class="parameter" id="setFriendListener-param-listener">{<span>required</span> <span class="type-annotation"><a href="../enum_V2TimFriendshipListener/V2TimFriendshipListener-class.html">V2TimFriendshipListener</a></span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置关系链监听器
+  
+
+</dd>
+
+        <dt id="subscribeOfficialAccount" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/subscribeOfficialAccount.html">subscribeOfficialAccount</a></span><span class="signature">(<wbr><span class="parameter" id="subscribeOfficialAccount-param-officialAccountID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">officialAccountID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  订阅公众号
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="unfollowUser" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/unfollowUser.html">unfollowUser</a></span><span class="signature">(<wbr><span class="parameter" id="unfollowUser-param-userIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_follow_operation_result/V2TimFollowOperationResult-class.html">V2TimFollowOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  取消关注用户
+  
+
+</dd>
+
+        <dt id="unsubscribeOfficialAccount" class="callable">
+  <span class="name"><a href="../manager_v2_tim_friendship_manager/V2TIMFriendshipManager/unsubscribeOfficialAccount.html">unsubscribeOfficialAccount</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribeOfficialAccount-param-officialAccountID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">officialAccountID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  取消订阅公众号
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../manager_v2_tim_friendship_manager/manager_v2_tim_friendship_manager-library.html">v2_tim_friendship_manager</a></li>
+    <li class="self-crumb">V2TIMFriendshipManager class</li>
+</ol>
+
+
+    <h5>v2_tim_friendship_manager library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

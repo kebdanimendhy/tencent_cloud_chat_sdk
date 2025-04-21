@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the fromValue method from the GlobalCallbackType enum, for the Dart programming language.">
+  <title>fromValue method - GlobalCallbackType enum - native_imsdk_bindings_generated library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/native_im_bindings_native_imsdk_bindings_generated-library.html">native_im&#47;bindings&#47;native_imsdk_bindings_generated.dart</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/GlobalCallbackType.html">GlobalCallbackType</a></li>
+    <li class="self-crumb">fromValue static method</li>
+  </ol>
+  <div class="self-name">fromValue</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="native_im_bindings_native_imsdk_bindings_generated&#47;GlobalCallbackType-enum-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">fromValue</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="../../native_im_bindings_native_imsdk_bindings_generated/GlobalCallbackType.html">GlobalCallbackType</a></span>
+<span class="name ">fromValue</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromValue-param-value"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">value</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static GlobalCallbackType fromValue(int value) =&gt; switch (value) {
+      0 =&gt; NetworkStatus,
+      1 =&gt; KickedOffline,
+      2 =&gt; UserSigExpired,
+      3 =&gt; SelfInfoUpdated,
+      4 =&gt; UserStatusChanged,
+      5 =&gt; UserInfoChanged,
+      6 =&gt; LogCallback,
+      7 =&gt; ReceiveNewMessage,
+      8 =&gt; MessageElemUploadProgress,
+      9 =&gt; MessageReadReceipt,
+      10 =&gt; MessageRevoke,
+      11 =&gt; MessageUpdate,
+      12 =&gt; MessageExtensionsChanged,
+      13 =&gt; MessageExtensionsDeleted,
+      14 =&gt; MessageReactionChange,
+      15 =&gt; AllMessageReceiveOption,
+      16 =&gt; GroupPinnedMessageChanged,
+      17 =&gt; GroupTipsEvent,
+      18 =&gt; GroupAttributeChanged,
+      19 =&gt; GroupCounterChanged,
+      20 =&gt; TopicCreated,
+      21 =&gt; TopicDeleted,
+      22 =&gt; TopicChanged,
+      23 =&gt; ReceiveTopicRESTCustomData,
+      24 =&gt; CreatePermissionGroup,
+      25 =&gt; DeletePermissionGroup,
+      26 =&gt; ChangePermissionGroupInfo,
+      27 =&gt; AddMembersToPermissionGroup,
+      28 =&gt; RemoveMembersFromPermissionGroup,
+      29 =&gt; AddTopicPermission,
+      30 =&gt; DeleteTopicPermission,
+      31 =&gt; ModifyTopicPermission,
+      32 =&gt; ConversationEvent,
+      33 =&gt; TotalUnreadMessageCountChanged,
+      34 =&gt; TotalUnreadMessageCountChangedByFilter,
+      35 =&gt; ConversationGroupCreated,
+      36 =&gt; ConversationGroupDeleted,
+      37 =&gt; ConversationGroupNameChanged,
+      38 =&gt; ConversationsAddedToGroup,
+      39 =&gt; ConversationsDeletedFromGroup,
+      40 =&gt; AddFriend,
+      41 =&gt; DeleteFriend,
+      42 =&gt; UpdateFriendProfile,
+      43 =&gt; FriendAddRequest,
+      44 =&gt; FriendApplicationListDeleted,
+      45 =&gt; FriendApplicationListRead,
+      46 =&gt; FriendBlackListAdded,
+      47 =&gt; FriendBlackListDeleted,
+      48 =&gt; FriendGroupCreated,
+      49 =&gt; FriendGroupDeleted,
+      50 =&gt; FriendGroupNameChanged,
+      51 =&gt; FriendsAddedToGroup,
+      52 =&gt; FriendsDeletedFromGroup,
+      53 =&gt; OfficialAccountSubscribed,
+      54 =&gt; OfficialAccountUnsubscribed,
+      55 =&gt; OfficialAccountDeleted,
+      56 =&gt; OfficialAccountInfoChanged,
+      57 =&gt; MyFollowingListChanged,
+      58 =&gt; MyFollowersListChanged,
+      59 =&gt; MutualFollowersListChanged,
+      60 =&gt; SignalingReceiveNewInvitation,
+      61 =&gt; SignalingInvitationCancelled,
+      62 =&gt; SignalingInviteeAccepted,
+      63 =&gt; SignalingInviteeRejected,
+      64 =&gt; SignalingInvitationTimeout,
+      65 =&gt; SignalingInvitationModified,
+      _ =&gt;
+        throw ArgumentError(&quot;Unknown value for GlobalCallbackType: $value&quot;),
+    };</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/native_im_bindings_native_imsdk_bindings_generated-library.html">native_imsdk_bindings_generated</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/GlobalCallbackType.html">GlobalCallbackType</a></li>
+    <li class="self-crumb">fromValue static method</li>
+</ol>
+
+
+    <h5>GlobalCallbackType enum</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

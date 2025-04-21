@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the fromValue method from the TIMErrCode enum, for the Dart programming language.">
+  <title>fromValue method - TIMErrCode enum - native_imsdk_bindings_generated library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/native_im_bindings_native_imsdk_bindings_generated-library.html">native_im&#47;bindings&#47;native_imsdk_bindings_generated.dart</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/TIMErrCode.html">TIMErrCode</a></li>
+    <li class="self-crumb">fromValue static method</li>
+  </ol>
+  <div class="self-name">fromValue</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="native_im_bindings_native_imsdk_bindings_generated&#47;TIMErrCode-enum-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">fromValue</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="../../native_im_bindings_native_imsdk_bindings_generated/TIMErrCode.html">TIMErrCode</a></span>
+<span class="name ">fromValue</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromValue-param-value"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">value</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static TIMErrCode fromValue(int value) =&gt; switch (value) {
+      0 =&gt; ERR_SUCC,
+      6015 =&gt; ERR_IN_PROGESS,
+      6017 =&gt; ERR_INVALID_PARAMETERS,
+      6022 =&gt; ERR_IO_OPERATION_FAILED,
+      6027 =&gt; ERR_INVALID_JSON,
+      6028 =&gt; ERR_OUT_OF_MEMORY,
+      6001 =&gt; ERR_PARSE_RESPONSE_FAILED,
+      6002 =&gt; ERR_SERIALIZE_REQ_FAILED,
+      6013 =&gt; ERR_SDK_NOT_INITIALIZED,
+      6005 =&gt; ERR_LOADMSG_FAILED,
+      6019 =&gt; ERR_DATABASE_OPERATE_FAILED,
+      7001 =&gt; ERR_SDK_COMM_CROSS_THREAD,
+      7002 =&gt; ERR_SDK_COMM_TINYID_EMPTY,
+      7003 =&gt; ERR_SDK_COMM_INVALID_IDENTIFIER,
+      7004 =&gt; ERR_SDK_COMM_FILE_NOT_FOUND,
+      7005 =&gt; ERR_SDK_COMM_FILE_TOO_LARGE,
+      7006 =&gt; ERR_SDK_COMM_FILE_SIZE_EMPTY,
+      7007 =&gt; ERR_SDK_COMM_FILE_OPEN_FAILED,
+      7008 =&gt; ERR_SDK_COMM_API_CALL_FREQUENCY_LIMIT,
+      7009 =&gt; ERR_SDK_COMM_INTERRUPT,
+      7010 =&gt; ERR_SDK_COMM_DATABASE_FAILURE,
+      7011 =&gt; ERR_SDK_COMM_DATABASE_NOTFOUND,
+      7012 =&gt; ERR_SDK_INTERNAL_ERROR,
+      7013 =&gt; ERR_SDK_INTERFACE_NOT_SUPPORT,
+      7014 =&gt; ERR_SDK_INVALID_OPERATION,
+      6014 =&gt; ERR_SDK_NOT_LOGGED_IN,
+      6026 =&gt; ERR_NO_PREVIOUS_LOGIN,
+      6206 =&gt; ERR_USER_SIG_EXPIRED,
+      6208 =&gt; ERR_LOGIN_KICKED_OFF_BY_OTHER,
+      7501 =&gt; ERR_SDK_ACCOUNT_LOGIN_IN_PROCESS,
+      7502 =&gt; ERR_SDK_ACCOUNT_LOGOUT_IN_PROCESS,
+      7503 =&gt; ERR_SDK_ACCOUNT_TLS_INIT_FAILED,
+      7504 =&gt; ERR_SDK_ACCOUNT_TLS_NOT_INITIALIZED,
+      7505 =&gt; ERR_SDK_ACCOUNT_TLS_TRANSPKG_ERROR,
+      7506 =&gt; ERR_SDK_ACCOUNT_TLS_DECRYPT_FAILED,
+      7507 =&gt; ERR_SDK_ACCOUNT_TLS_REQUEST_FAILED,
+      7508 =&gt; ERR_SDK_ACCOUNT_TLS_REQUEST_TIMEOUT,
+      6004 =&gt; ERR_INVALID_CONVERSATION,
+      6006 =&gt; ERR_FILE_TRANS_AUTH_FAILED,
+      6007 =&gt; ERR_FILE_TRANS_NO_SERVER,
+      6008 =&gt; ERR_FILE_TRANS_UPLOAD_FAILED,
+      6031 =&gt; ERR_IMAGE_UPLOAD_FAILED_NOTIMAGE,
+      6009 =&gt; ERR_FILE_TRANS_DOWNLOAD_FAILED,
+      6010 =&gt; ERR_HTTP_REQ_FAILED,
+      6016 =&gt; ERR_INVALID_MSG_ELEM,
+      6021 =&gt; ERR_INVALID_SDK_OBJECT,
+      6032 =&gt; ERR_INVALID_MSG_RECEIVER,
+      8001 =&gt; ERR_SDK_MSG_BODY_SIZE_LIMIT,
+      8002 =&gt; ERR_SDK_MSG_KEY_REQ_DIFFER_RSP,
+      8003 =&gt; ERR_SDK_IMAGE_CONVERT_ERROR,
+      8004 =&gt; ERR_SDK_IMAGE_CI_BLOCK,
+      8005 =&gt; ERR_MERGER_MSG_LAYERS_OVER_LIMIT,
+      8006 =&gt; ERR_SDK_MSG_MODIFY_CONFLICT,
+      8010 =&gt; ERR_SDK_SIGNALING_INVALID_INVITE_ID,
+      8011 =&gt; ERR_SDK_SIGNALING_NO_PERMISSION,
+      8020 =&gt; ERR_SDK_INVALID_CANCEL_MESSAGE,
+      8021 =&gt; ERR_SDK_SEND_MESSAGE_FAILED_WITH_CANCEL,
+      8501 =&gt; ERR_SDK_GROUP_INVALID_ID,
+      8502 =&gt; ERR_SDK_GROUP_INVALID_NAME,
+      8503 =&gt; ERR_SDK_GROUP_INVALID_INTRODUCTION,
+      8504 =&gt; ERR_SDK_GROUP_INVALID_NOTIFICATION,
+      8505 =&gt; ERR_SDK_GROUP_INVALID_FACE_URL,
+      8506 =&gt; ERR_SDK_GROUP_INVALID_NAME_CARD,
+      8507 =&gt; ERR_SDK_GROUP_MEMBER_COUNT_LIMIT,
+      8508 =&gt; ERR_SDK_GROUP_JOIN_PRIVATE_GROUP_DENY,
+      8509 =&gt; ERR_SDK_GROUP_INVITE_SUPER_DENY,
+      8510 =&gt; ERR_SDK_GROUP_INVITE_NO_MEMBER,
+      8511 =&gt; ERR_SDK_GROUP_ATTR_FREQUENCY_LIMIT,
+      8512 =&gt; ERR_SDK_GROUP_GET_ONLINE_MEMBER_COUNT_LIMIT,
+      8513 =&gt; ERR_SDK_GROUP_GET_GROUPS_INFO_LIMIT,
+      8514 =&gt; ERR_SDK_GROUP_GET_JOINED_GROUP_LIMIT,
+      9001 =&gt; ERR_SDK_FRIENDSHIP_INVALID_PROFILE_KEY,
+      9002 =&gt; ERR_SDK_FRIENDSHIP_INVALID_ADD_REMARK,
+      9003 =&gt; ERR_SDK_FRIENDSHIP_INVALID_ADD_WORDING,
+      9004 =&gt; ERR_SDK_FRIENDSHIP_INVALID_ADD_SOURCE,
+      9005 =&gt; ERR_SDK_FRIENDSHIP_FRIEND_GROUP_EMPTY,
+      9006 =&gt; ERR_SDK_FRIENDSHIP_EXCEED_THE_LIMIT,
+      9501 =&gt; ERR_SDK_NET_ENCODE_FAILED,
+      9502 =&gt; ERR_SDK_NET_DECODE_FAILED,
+      9503 =&gt; ERR_SDK_NET_AUTH_INVALID,
+      9504 =&gt; ERR_SDK_NET_COMPRESS_FAILED,
+      9505 =&gt; ERR_SDK_NET_UNCOMPRESS_FAILED,
+      9506 =&gt; ERR_SDK_NET_FREQ_LIMIT,
+      9507 =&gt; ERR_SDK_NET_REQ_COUNT_LIMIT,
+      9508 =&gt; ERR_SDK_NET_DISCONNECT,
+      9509 =&gt; ERR_SDK_NET_ALLREADY_CONN,
+      9510 =&gt; ERR_SDK_NET_CONN_TIMEOUT,
+      9511 =&gt; ERR_SDK_NET_CONN_REFUSE,
+      9512 =&gt; ERR_SDK_NET_NET_UNREACH,
+      9513 =&gt; ERR_SDK_NET_SOCKET_NO_BUFF,
+      9514 =&gt; ERR_SDK_NET_RESET_BY_PEER,
+      9515 =&gt; ERR_SDK_NET_SOCKET_INVALID,
+      9516 =&gt; ERR_SDK_NET_HOST_GETADDRINFO_FAILED,
+      9517 =&gt; ERR_SDK_NET_CONNECT_RESET,
+      9518 =&gt; ERR_SDK_NET_WAIT_INQUEUE_TIMEOUT,
+      9519 =&gt; ERR_SDK_NET_WAIT_SEND_TIMEOUT,
+      9520 =&gt; ERR_SDK_NET_WAIT_ACK_TIMEOUT,
+      9521 =&gt; ERR_SDK_NET_WAIT_SEND_REMAINING_TIMEOUT,
+      9522 =&gt; ERR_SDK_NET_PKG_SIZE_LIMIT,
+      9523 =&gt; ERR_SDK_NET_WAIT_SEND_TIMEOUT_NO_NETWORK,
+      9524 =&gt; ERR_SDK_NET_WAIT_ACK_TIMEOUT_NO_NETWORK,
+      9525 =&gt; ERR_SDK_NET_SEND_REMAINING_TIMEOUT_NO_NETWORK,
+      -302 =&gt; ERR_SVR_SSO_CONNECT_LIMIT,
+      -10000 =&gt; ERR_SVR_SSO_VCODE,
+      -10001 =&gt; ERR_SVR_SSO_D2_EXPIRED,
+      -10003 =&gt; ERR_SVR_SSO_A2_UP_INVALID,
+      -10004 =&gt; ERR_SVR_SSO_A2_DOWN_INVALID,
+      -10005 =&gt; ERR_SVR_SSO_EMPTY_KEY,
+      -10006 =&gt; ERR_SVR_SSO_UIN_INVALID,
+      -10007 =&gt; ERR_SVR_SSO_VCODE_TIMEOUT,
+      -10008 =&gt; ERR_SVR_SSO_NO_IMEI_AND_A2,
+      -10009 =&gt; ERR_SVR_SSO_COOKIE_INVALID,
+      -10101 =&gt; ERR_SVR_SSO_DOWN_TIP,
+      -10102 =&gt; ERR_SVR_SSO_DISCONNECT,
+      -10103 =&gt; ERR_SVR_SSO_IDENTIFIER_INVALID,
+      -10104 =&gt; ERR_SVR_SSO_CLIENT_CLOSE,
+      -10105 =&gt; ERR_SVR_SSO_MSFSDK_QUIT,
+      -10106 =&gt; ERR_SVR_SSO_D2KEY_WRONG,
+      -10107 =&gt; ERR_SVR_SSO_UNSURPPORT,
+      -10108 =&gt; ERR_SVR_SSO_PREPAID_ARREARS,
+      -10109 =&gt; ERR_SVR_SSO_PACKET_WRONG,
+      -10110 =&gt; ERR_SVR_SSO_APPID_BLACK_LIST,
+      -10111 =&gt; ERR_SVR_SSO_CMD_BLACK_LIST,
+      -10112 =&gt; ERR_SVR_SSO_APPID_WITHOUT_USING,
+      -10113 =&gt; ERR_SVR_SSO_FREQ_LIMIT,
+      -10114 =&gt; ERR_SVR_SSO_OVERLOAD,
+      -20009 =&gt; ERR_SVR_SSO_FREQUENCY_LIMIT,
+      114000 =&gt; ERR_SVR_RES_NOT_FOUND,
+      114001 =&gt; ERR_SVR_RES_ACCESS_DENY,
+      114002 =&gt; ERR_SVR_RES_SIZE_LIMIT,
+      114003 =&gt; ERR_SVR_RES_SEND_CANCEL,
+      114004 =&gt; ERR_SVR_RES_READ_FAILED,
+      114005 =&gt; ERR_SVR_RES_TRANSFER_TIMEOUT,
+      114011 =&gt; ERR_SVR_RES_INVALID_PARAMETERS,
+      115066 =&gt; ERR_SVR_RES_INVALID_FILE_MD5,
+      115068 =&gt; ERR_SVR_RES_INVALID_PART_MD5,
+      60002 =&gt; ERR_SVR_COMM_INVALID_HTTP_URL,
+      60003 =&gt; ERR_SVR_COMM_REQ_JSON_PARSE_FAILED,
+      60004 =&gt; ERR_SVR_COMM_INVALID_ACCOUNT,
+      60005 =&gt; ERR_SVR_COMM_INVALID_ACCOUNT_EX,
+      60006 =&gt; ERR_SVR_COMM_INVALID_SDKAPPID,
+      60007 =&gt; ERR_SVR_COMM_REST_FREQ_LIMIT,
+      60008 =&gt; ERR_SVR_COMM_REQUEST_TIMEOUT,
+      60009 =&gt; ERR_SVR_COMM_INVALID_RES,
+      60010 =&gt; ERR_SVR_COMM_ID_NOT_ADMIN,
+      60011 =&gt; ERR_SVR_COMM_SDKAPPID_FREQ_LIMIT,
+      60012 =&gt; ERR_SVR_COMM_SDKAPPID_MISS,
+      60013 =&gt; ERR_SVR_COMM_RSP_JSON_PARSE_FAILED,
+      60014 =&gt; ERR_SVR_COMM_EXCHANGE_ACCOUNT_TIMEUT,
+      60015 =&gt; ERR_SVR_COMM_INVALID_ID_FORMAT,
+      60016 =&gt; ERR_SVR_COMM_SDKAPPID_FORBIDDEN,
+      60017 =&gt; ERR_SVR_COMM_REQ_FORBIDDEN,
+      60018 =&gt; ERR_SVR_COMM_REQ_FREQ_LIMIT,
+      60019 =&gt; ERR_SVR_COMM_REQ_FREQ_LIMIT_EX,
+      60020 =&gt; ERR_SVR_COMM_INVALID_SERVICE,
+      80001 =&gt; ERR_SVR_COMM_SENSITIVE_TEXT,
+      80002 =&gt; ERR_SVR_COMM_BODY_SIZE_LIMIT,
+      80004 =&gt; ERR_SVR_COMM_SENSITIVE_IMAGE,
+      70001 =&gt; ERR_SVR_ACCOUNT_USERSIG_EXPIRED,
+      70002 =&gt; ERR_SVR_ACCOUNT_USERSIG_EMPTY,
+      70003 =&gt; ERR_SVR_ACCOUNT_USERSIG_CHECK_FAILED,
+      70005 =&gt; ERR_SVR_ACCOUNT_USERSIG_CHECK_FAILED_EX,
+      70009 =&gt; ERR_SVR_ACCOUNT_USERSIG_MISMATCH_PUBLICKEY,
+      70013 =&gt; ERR_SVR_ACCOUNT_USERSIG_MISMATCH_ID,
+      70014 =&gt; ERR_SVR_ACCOUNT_USERSIG_MISMATCH_SDKAPPID,
+      70016 =&gt; ERR_SVR_ACCOUNT_USERSIG_PUBLICKEY_NOT_FOUND,
+      70020 =&gt; ERR_SVR_ACCOUNT_SDKAPPID_NOT_FOUND,
+      70052 =&gt; ERR_SVR_ACCOUNT_INVALID_USERSIG,
+      70107 =&gt; ERR_SVR_ACCOUNT_NOT_FOUND,
+      70114 =&gt; ERR_SVR_ACCOUNT_SEC_RSTR,
+      70169 =&gt; ERR_SVR_ACCOUNT_INTERNAL_TIMEOUT,
+      70206 =&gt; ERR_SVR_ACCOUNT_INVALID_COUNT,
+      70402 =&gt; ERR_SVR_ACCOUNT_INVALID_PARAMETERS,
+      70403 =&gt; ERR_SVR_ACCOUNT_ADMIN_REQUIRED,
+      70050 =&gt; ERR_SVR_ACCOUNT_FREQ_LIMIT,
+      70051 =&gt; ERR_SVR_ACCOUNT_BLACKLIST,
+      70398 =&gt; ERR_SVR_ACCOUNT_COUNT_LIMIT,
+      70500 =&gt; ERR_SVR_ACCOUNT_INTERNAL_ERROR,
+      72001 =&gt; ERR_SVR_ACCOUNT_USER_STATUS_DISABLED,
+      40001 =&gt; ERR_SVR_PROFILE_INVALID_PARAMETERS,
+      40002 =&gt; ERR_SVR_PROFILE_ACCOUNT_MISS,
+      40003 =&gt; ERR_SVR_PROFILE_ACCOUNT_NOT_FOUND,
+      40004 =&gt; ERR_SVR_PROFILE_ADMIN_REQUIRED,
+      40005 =&gt; ERR_SVR_PROFILE_SENSITIVE_TEXT,
+      40006 =&gt; ERR_SVR_PROFILE_INTERNAL_ERROR,
+      40007 =&gt; ERR_SVR_PROFILE_READ_PERMISSION_REQUIRED,
+      40008 =&gt; ERR_SVR_PROFILE_WRITE_PERMISSION_REQUIRED,
+      40009 =&gt; ERR_SVR_PROFILE_TAG_NOT_FOUND,
+      40601 =&gt; ERR_SVR_PROFILE_SIZE_LIMIT,
+      40605 =&gt; ERR_SVR_PROFILE_VALUE_ERROR,
+      40610 =&gt; ERR_SVR_PROFILE_INVALID_VALUE_FORMAT,
+      72012 =&gt; ERR_SVR_PROFILE_SUBSCRIPTION_DISABLED,
+      30001 =&gt; ERR_SVR_FRIENDSHIP_INVALID_PARAMETERS,
+      30002 =&gt; ERR_SVR_FRIENDSHIP_INVALID_SDKAPPID,
+      30003 =&gt; ERR_SVR_FRIENDSHIP_ACCOUNT_NOT_FOUND,
+      30004 =&gt; ERR_SVR_FRIENDSHIP_ADMIN_REQUIRED,
+      30005 =&gt; ERR_SVR_FRIENDSHIP_SENSITIVE_TEXT,
+      30006 =&gt; ERR_SVR_FRIENDSHIP_INTERNAL_ERROR,
+      30007 =&gt; ERR_SVR_FRIENDSHIP_NET_TIMEOUT,
+      30008 =&gt; ERR_SVR_FRIENDSHIP_WRITE_CONFLICT,
+      30009 =&gt; ERR_SVR_FRIENDSHIP_ADD_FRIEND_DENY,
+      30010 =&gt; ERR_SVR_FRIENDSHIP_COUNT_LIMIT,
+      30011 =&gt; ERR_SVR_FRIENDSHIP_GROUP_COUNT_LIMIT,
+      30012 =&gt; ERR_SVR_FRIENDSHIP_PENDENCY_LIMIT,
+      30013 =&gt; ERR_SVR_FRIENDSHIP_BLACKLIST_LIMIT,
+      30014 =&gt; ERR_SVR_FRIENDSHIP_PEER_FRIEND_LIMIT,
+      30015 =&gt; ERR_SVR_FRIENDSHIP_ALREADY_FRIENDS,
+      30515 =&gt; ERR_SVR_FRIENDSHIP_IN_SELF_BLACKLIST,
+      30516 =&gt; ERR_SVR_FRIENDSHIP_ALLOW_TYPE_DENY_ANY,
+      30525 =&gt; ERR_SVR_FRIENDSHIP_IN_PEER_BLACKLIST,
+      30539 =&gt; ERR_SVR_FRIENDSHIP_ALLOW_TYPE_NEED_CONFIRM,
+      30540 =&gt; ERR_SVR_FRIENDSHIP_ADD_FRIEND_SEC_RSTR,
+      30614 =&gt; ERR_SVR_FRIENDSHIP_PENDENCY_NOT_FOUND,
+      31704 =&gt; ERR_SVR_FRIENDSHIP_DEL_NONFRIEND,
+      31707 =&gt; ERR_SVR_FRIENDSHIP_DEL_FRIEND_SEC_RSTR,
+      31804 =&gt; ERR_SVR_FRIENDSHIP_ACCOUNT_NOT_FOUND_EX,
+      32100 =&gt; ERR_SVR_FRIENDSHIP_SELF_FOLLOWING_COUNT_EXCEEDS_LIMIT,
+      32101 =&gt; ERR_SVR_FRIENDSHIP_PEER_FOLLOWERS_COUNT_EXCEEDS_LIMIT,
+      32102 =&gt; ERR_SVR_FRIENDSHIP_SELF_MUTUAL_FOLLOWERS_COUNT_EXCEEDS_LIMIT,
+      32103 =&gt; ERR_SVR_FRIENDSHIP_PEER_MUTUAL_FOLLOWERS_COUNT_EXCEEDS_LIMIT,
+      50001 =&gt; ERR_SVR_CONV_ACCOUNT_NOT_FOUND,
+      50002 =&gt; ERR_SVR_CONV_INVALID_PARAMETERS,
+      50003 =&gt; ERR_SVR_CONV_ADMIN_REQUIRED,
+      50004 =&gt; ERR_SVR_CONV_INTERNAL_ERROR,
+      50005 =&gt; ERR_SVR_CONV_NET_TIMEOUT,
+      51006 =&gt; ERR_SVR_CONV_CONV_MARK_REQ_COUNT_EXCEED_LIMIT,
+      51007 =&gt; ERR_SVR_CONV_CONV_MARK_OPERATE_FAILED,
+      51008 =&gt; ERR_SVR_CONV_CONV_MARK_TOTAL_COUNT_EXCEED_LIMIT,
+      51009 =&gt; ERR_SVR_CONV_CONV_GROUP_NOT_EXIST,
+      51010 =&gt; ERR_SVR_CONV_CONV_GROUP_TOTAL_COUNT_EXCEED_LIMIT,
+      51011 =&gt; ERR_SVR_CONV_CONV_GROUP_NAME_EXCEED_LENGTH,
+      20001 =&gt; ERR_SVR_MSG_PKG_PARSE_FAILED,
+      20002 =&gt; ERR_SVR_MSG_INTERNAL_AUTH_FAILED,
+      20003 =&gt; ERR_SVR_MSG_INVALID_ID,
+      20004 =&gt; ERR_SVR_MSG_NET_ERROR,
+      20005 =&gt; ERR_SVR_MSG_INTERNAL_ERROR1,
+      20006 =&gt; ERR_SVR_MSG_PUSH_DENY,
+      20007 =&gt; ERR_SVR_MSG_IN_PEER_BLACKLIST,
+      20009 =&gt; ERR_SVR_MSG_BOTH_NOT_FRIEND,
+      20010 =&gt; ERR_SVR_MSG_NOT_PEER_FRIEND,
+      20011 =&gt; ERR_SVR_MSG_NOT_SELF_FRIEND,
+      20012 =&gt; ERR_SVR_MSG_SHUTUP_DENY,
+      20016 =&gt; ERR_SVR_MSG_REVOKE_TIME_LIMIT,
+      20018 =&gt; ERR_SVR_MSG_DEL_RAMBLE_INTERNAL_ERROR,
+      23001 =&gt; ERR_SVR_MSG_EXTENSION_CONFLICT,
+      23004 =&gt; ERR_SVR_MSG_EXTENSION_NOT_EXIST,
+      23005 =&gt; ERR_SVR_MSG_REACTION_COUNT_LIMIT,
+      23006 =&gt; ERR_SVR_MSG_REACTION_USER_COUNT_LIMIT,
+      23007 =&gt; ERR_SVR_MSG_REACTION_ALREADY_CONTAIN_USER,
+      23008 =&gt; ERR_SVR_MSG_REACTION_NOT_EXISTS,
+      23009 =&gt; ERR_SVR_MSG_REACTION_NOT_CONTAIN_USER,
+      90001 =&gt; ERR_SVR_MSG_JSON_PARSE_FAILED,
+      90002 =&gt; ERR_SVR_MSG_INVALID_JSON_BODY_FORMAT,
+      90003 =&gt; ERR_SVR_MSG_INVALID_TO_ACCOUNT,
+      90005 =&gt; ERR_SVR_MSG_INVALID_RAND,
+      90006 =&gt; ERR_SVR_MSG_INVALID_TIMESTAMP,
+      90007 =&gt; ERR_SVR_MSG_BODY_NOT_ARRAY,
+      90009 =&gt; ERR_SVR_MSG_ADMIN_REQUIRED,
+      90010 =&gt; ERR_SVR_MSG_INVALID_JSON_FORMAT,
+      90011 =&gt; ERR_SVR_MSG_TO_ACCOUNT_COUNT_LIMIT,
+      90012 =&gt; ERR_SVR_MSG_TO_ACCOUNT_NOT_FOUND,
+      90026 =&gt; ERR_SVR_MSG_TIME_LIMIT,
+      90031 =&gt; ERR_SVR_MSG_INVALID_SYNCOTHERMACHINE,
+      90044 =&gt; ERR_SVR_MSG_INVALID_MSGLIFETIME,
+      90048 =&gt; ERR_SVR_MSG_ACCOUNT_NOT_FOUND,
+      90994 =&gt; ERR_SVR_MSG_INTERNAL_ERROR2,
+      90995 =&gt; ERR_SVR_MSG_INTERNAL_ERROR3,
+      91000 =&gt; ERR_SVR_MSG_INTERNAL_ERROR4,
+      90992 =&gt; ERR_SVR_MSG_INTERNAL_ERROR5,
+      93000 =&gt; ERR_SVR_MSG_BODY_SIZE_LIMIT,
+      91101 =&gt; ERR_SVR_MSG_LONGPOLLING_COUNT_LIMIT,
+      10002 =&gt; ERR_SVR_GROUP_INTERNAL_ERROR,
+      10003 =&gt; ERR_SVR_GROUP_API_NAME_ERROR,
+      10004 =&gt; ERR_SVR_GROUP_INVALID_PARAMETERS,
+      10005 =&gt; ERR_SVR_GROUP_ACOUNT_COUNT_LIMIT,
+      10006 =&gt; ERR_SVR_GROUP_FREQ_LIMIT,
+      10007 =&gt; ERR_SVR_GROUP_PERMISSION_DENY,
+      10008 =&gt; ERR_SVR_GROUP_INVALID_REQ,
+      10009 =&gt; ERR_SVR_GROUP_SUPER_NOT_ALLOW_QUIT,
+      10010 =&gt; ERR_SVR_GROUP_NOT_FOUND,
+      10011 =&gt; ERR_SVR_GROUP_JSON_PARSE_FAILED,
+      10012 =&gt; ERR_SVR_GROUP_INVALID_ID,
+      10013 =&gt; ERR_SVR_GROUP_ALLREADY_MEMBER,
+      10014 =&gt; ERR_SVR_GROUP_FULL_MEMBER_COUNT,
+      10015 =&gt; ERR_SVR_GROUP_INVALID_GROUPID,
+      10016 =&gt; ERR_SVR_GROUP_REJECT_FROM_THIRDPARTY,
+      10017 =&gt; ERR_SVR_GROUP_SHUTUP_DENY,
+      10018 =&gt; ERR_SVR_GROUP_RSP_SIZE_LIMIT,
+      10019 =&gt; ERR_SVR_GROUP_ACCOUNT_NOT_FOUND,
+      10021 =&gt; ERR_SVR_GROUP_GROUPID_IN_USED,
+      10023 =&gt; ERR_SVR_GROUP_SEND_MSG_FREQ_LIMIT,
+      10024 =&gt; ERR_SVR_GROUP_REQ_ALLREADY_BEEN_PROCESSED,
+      10025 =&gt; ERR_SVR_GROUP_GROUPID_IN_USED_FOR_SUPER,
+      10026 =&gt; ERR_SVR_GROUP_SDKAPPID_DENY,
+      10030 =&gt; ERR_SVR_GROUP_REVOKE_MSG_NOT_FOUND,
+      10031 =&gt; ERR_SVR_GROUP_REVOKE_MSG_TIME_LIMIT,
+      10032 =&gt; ERR_SVR_GROUP_REVOKE_MSG_DENY,
+      10033 =&gt; ERR_SVR_GROUP_NOT_ALLOW_REVOKE_MSG,
+      10034 =&gt; ERR_SVR_GROUP_REMOVE_MSG_DENY,
+      10035 =&gt; ERR_SVR_GROUP_NOT_ALLOW_REMOVE_MSG,
+      10036 =&gt; ERR_SVR_GROUP_AVCHATROOM_COUNT_LIMIT,
+      10037 =&gt; ERR_SVR_GROUP_COUNT_LIMIT,
+      10038 =&gt; ERR_SVR_GROUP_MEMBER_COUNT_LIMIT,
+      10056 =&gt; ERR_SVR_GROUP_ATTRIBUTE_WRITE_CONFILCT,
+      10070 =&gt; ERR_SVR_GROUP_PINNED_MESSAGE_COUNT_LIMIT,
+      10071 =&gt; ERR_SVR_GROUP_MESSAGE_ALREADY_PINNED,
+      6003 =&gt; ERR_NO_SUCC_RESULT,
+      6011 =&gt; ERR_TO_USER_INVALID,
+      6012 =&gt; ERR_REQUEST_TIME_OUT,
+      6018 =&gt; ERR_INIT_CORE_FAIL,
+      6020 =&gt; ERR_EXPIRED_SESSION_NODE,
+      6023 =&gt; ERR_LOGGED_OUT_BEFORE_LOGIN_FINISHED,
+      6024 =&gt; ERR_TLSSDK_NOT_INITIALIZED,
+      6025 =&gt; ERR_TLSSDK_USER_NOT_FOUND,
+      6100 =&gt; ERR_BIND_FAIL_UNKNOWN,
+      6101 =&gt; ERR_BIND_FAIL_NO_SSOTICKET,
+      6102 =&gt; ERR_BIND_FAIL_REPEATD_BIND,
+      6103 =&gt; ERR_BIND_FAIL_TINYID_NULL,
+      6104 =&gt; ERR_BIND_FAIL_GUID_NULL,
+      6105 =&gt; ERR_BIND_FAIL_UNPACK_REGPACK_FAILED,
+      6106 =&gt; ERR_BIND_FAIL_REG_TIMEOUT,
+      6107 =&gt; ERR_BIND_FAIL_ISBINDING,
+      6120 =&gt; ERR_PACKET_FAIL_UNKNOWN,
+      6121 =&gt; ERR_PACKET_FAIL_REQ_NO_NET,
+      6122 =&gt; ERR_PACKET_FAIL_RESP_NO_NET,
+      6123 =&gt; ERR_PACKET_FAIL_REQ_NO_AUTH,
+      6124 =&gt; ERR_PACKET_FAIL_SSO_ERR,
+      6125 =&gt; ERR_PACKET_FAIL_REQ_TIMEOUT,
+      6126 =&gt; ERR_PACKET_FAIL_RESP_TIMEOUT,
+      6127 =&gt; ERR_PACKET_FAIL_REQ_ON_RESEND,
+      6128 =&gt; ERR_PACKET_FAIL_RESP_NO_RESEND,
+      6129 =&gt; ERR_PACKET_FAIL_FLOW_SAVE_FILTERED,
+      6130 =&gt; ERR_PACKET_FAIL_REQ_OVER_LOAD,
+      6131 =&gt; ERR_PACKET_FAIL_LOGIC_ERR,
+      6150 =&gt; ERR_FRIENDSHIP_PROXY_NOT_SYNCED,
+      6151 =&gt; ERR_FRIENDSHIP_PROXY_SYNCING,
+      6152 =&gt; ERR_FRIENDSHIP_PROXY_SYNCED_FAIL,
+      6153 =&gt; ERR_FRIENDSHIP_PROXY_LOCAL_CHECK_ERR,
+      6160 =&gt; ERR_GROUP_INVALID_FIELD,
+      6161 =&gt; ERR_GROUP_STORAGE_DISABLED,
+      6162 =&gt; ERR_LOADGRPINFO_FAILED,
+      6200 =&gt; ERR_REQ_NO_NET_ON_REQ,
+      6201 =&gt; ERR_REQ_NO_NET_ON_RSP,
+      6205 =&gt; ERR_SERIVCE_NOT_READY,
+      6207 =&gt; ERR_LOGIN_AUTH_FAILED,
+      6209 =&gt; ERR_NEVER_CONNECT_AFTER_LAUNCH,
+      6210 =&gt; ERR_REQ_FAILED,
+      6211 =&gt; ERR_REQ_INVALID_REQ,
+      6212 =&gt; ERR_REQ_OVERLOADED,
+      6213 =&gt; ERR_REQ_KICK_OFF,
+      6214 =&gt; ERR_REQ_SERVICE_SUSPEND,
+      6215 =&gt; ERR_REQ_INVALID_SIGN,
+      6216 =&gt; ERR_REQ_INVALID_COOKIE,
+      6217 =&gt; ERR_LOGIN_TLS_RSP_PARSE_FAILED,
+      6218 =&gt; ERR_LOGIN_OPENMSG_TIMEOUT,
+      6219 =&gt; ERR_LOGIN_OPENMSG_RSP_PARSE_FAILED,
+      6220 =&gt; ERR_LOGIN_TLS_DECRYPT_FAILED,
+      6221 =&gt; ERR_WIFI_NEED_AUTH,
+      6222 =&gt; ERR_USER_CANCELED,
+      6223 =&gt; ERR_REVOKE_TIME_LIMIT_EXCEED,
+      6224 =&gt; ERR_LACK_UGC_EXT,
+      6226 =&gt; ERR_AUTOLOGIN_NEED_USERSIG,
+      6300 =&gt; ERR_QAL_NO_SHORT_CONN_AVAILABLE,
+      80101 =&gt; ERR_REQ_CONTENT_ATTACK,
+      70101 =&gt; ERR_LOGIN_SIG_EXPIRE,
+      90101 =&gt; ERR_SDK_HAD_INITIALIZED,
+      115000 =&gt; ERR_OPENBDH_BASE,
+      6250 =&gt; ERR_REQUEST_NO_NET_ONREQ,
+      6251 =&gt; ERR_REQUEST_NO_NET_ONRSP,
+      6252 =&gt; ERR_REQUEST_FAILED,
+      6253 =&gt; ERR_REQUEST_INVALID_REQ,
+      6254 =&gt; ERR_REQUEST_OVERLOADED,
+      6255 =&gt; ERR_REQUEST_KICK_OFF,
+      6256 =&gt; ERR_REQUEST_SERVICE_SUSPEND,
+      6257 =&gt; ERR_REQUEST_INVALID_SIGN,
+      6258 =&gt; ERR_REQUEST_INVALID_COOKIE,
+      _ =&gt; throw ArgumentError(&quot;Unknown value for TIMErrCode: $value&quot;),
+    };</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/native_im_bindings_native_imsdk_bindings_generated-library.html">native_imsdk_bindings_generated</a></li>
+    <li><a href="../../native_im_bindings_native_imsdk_bindings_generated/TIMErrCode.html">TIMErrCode</a></li>
+    <li class="self-crumb">fromValue static method</li>
+</ol>
+
+
+    <h5>TIMErrCode enum</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

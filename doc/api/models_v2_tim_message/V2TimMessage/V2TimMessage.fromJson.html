@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the V2TimMessage.fromJson constructor from Class V2TimMessage from the v2_tim_message library, for the Dart programming language.">
+  <title>V2TimMessage.fromJson constructor - V2TimMessage - v2_tim_message library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../models_v2_tim_message/models_v2_tim_message-library.html">models&#47;v2_tim_message.dart</a></li>
+    <li><a href="../../models_v2_tim_message/V2TimMessage-class.html">V2TimMessage</a></li>
+    <li class="self-crumb">V2TimMessage.fromJson constructor</li>
+  </ol>
+  <div class="self-name">V2TimMessage.fromJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="models_v2_tim_message&#47;V2TimMessage-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">V2TimMessage.fromJson</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">V2TimMessage.fromJson</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+    </section>
+
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">V2TimMessage.fromJson(Map json) {
+  json = Utils.formatJson(json);
+  _messageConvType = json[&#39;message_conv_type&#39;];
+  _messageConvID = json[&#39;message_conv_id&#39;];
+  if (_messageConvType == ConversationType.V2TIM_GROUP) {
+    groupID = _messageConvID;
+  } else {
+    userID = _messageConvID;
+  }
+  sender = json[&#39;message_sender&#39;];
+  _senderTinyID = json[&#39;message_sender_tiny_id&#39;];
+  _receiverTinyID = json[&#39;message_receiver_tiny_id&#39;];
+  priority = json[&#39;message_priority&#39;];
+  _clientTime = json[&#39;message_client_time&#39;];
+  _serverTime = json[&#39;message_server_time&#39;];
+  if (_serverTime != null &amp;&amp; _serverTime! &gt; 0) {
+    timestamp = _serverTime;
+  } else {
+    timestamp = _clientTime ?? 0;
+  }
+  isSelf = json[&#39;message_is_from_self&#39;];
+  _platform = json[&#39;message_platform&#39;];
+  isRead = json[&#39;message_is_read&#39;];
+  isOnlineOnly = json[&#39;message_is_online_msg&#39;];
+  isPeerRead = json[&#39;message_is_peer_read&#39;];
+  _receiptPeerRead = json[&#39;message_receipt_peer_read&#39;];
+  needReadReceipt = json[&#39;message_need_read_receipt&#39;];
+  isBroadcastMessage = json[&#39;message_is_broadcast_message&#39;];
+  _messageHasSentReceipt = json[&#39;message_has_sent_receipt&#39;];
+  _messageGroupReceiptReadCount = json[&#39;message_group_receipt_read_count&#39;];
+  _messageGroupReceiptUnreadCount = json[&#39;message_group_receipt_unread_count&#39;];
+  isSupportMessageExtension = json[&quot;message_support_message_extension&quot;];
+  _messageVersion = json[&#39;message_version&#39;];
+  status = json[&#39;message_status&#39;];
+  msgID = json[&#39;message_msg_id&#39;];
+  seq = json[&#39;message_seq&#39;]?.toString();
+  random = json[&#39;message_rand&#39;];
+  localCustomInt = json[&#39;message_custom_int&#39;];
+  localCustomData = json[&#39;message_custom_str&#39;] ?? &quot;&quot;;
+  cloudCustomData = json[&#39;message_cloud_custom_str&#39;] ?? &quot;&quot;;
+  isExcludedFromUnreadCount = json[&#39;message_is_excluded_from_unread_count&#39;];
+  senderProfile = json[&#39;message_sender_profile&#39;] != null ? V2TimUserInfo.fromJson(json[&#39;message_sender_profile&#39;]) : null;
+  nickName = senderProfile?.nickName;
+  faceUrl = senderProfile?.faceUrl;
+  if (senderProfile != null) {
+    friendRemark = json[&#39;message_sender_profile&#39;][&#39;user_profile_friend_remark&#39;];
+  }
+  isExcludedFromLastMessage = json[&#39;message_excluded_from_last_message&#39;];
+  isExcludedFromContentModeration = json[&#39;message_excluded_from_content_moderation&#39;];
+  _customModerationConfigurationID = json[&#39;message_custom_moderation_configuration_id&#39;];
+  hasRiskContent = _riskTypeIdentified &gt; 1 ? true : false;
+  _riskTypeIdentified = json[&#39;message_risk_type_identified&#39;];
+  isDisableCloudMessagePreHook = json[&#39;message_disable_cloud_message_pre_hook&#39;];
+  isDisableCloudMessagePostHook = json[&#39;message_disable_cloud_message_post_hook&#39;];
+  revokeReason = json[&#39;message_revoke_reason&#39;];
+  _revokerUserID = json[&#39;message_revoker_user_id&#39;];
+  _revokerNickname = json[&#39;message_revoker_nick_name&#39;];
+  _revokerFaceUrl = json[&#39;message_revoker_face_url&#39;];
+  if (_revokerUserID != null) {
+    _revokerInfo = V2TimUserFullInfo();
+    _revokerInfo!.userID = _revokerUserID;
+    _revokerInfo!.nickName = _revokerNickname;
+    _revokerInfo!.faceUrl = _revokerFaceUrl;
+  }
+
+  _pinnerUserID = json[&#39;message_pinner_user_id&#39;];
+  _pinnerNickname = json[&#39;message_pinner_nick_name&#39;];
+  _pinnerRemark = json[&#39;message_pinner_friend_remark&#39;];
+  _pinnerNameCard = json[&#39;message_pinner_name_card&#39;];
+  _pinnerFaceUrl = json[&#39;message_pinner_face_url&#39;];
+  targetGroupMemberList = json[&#39;message_target_group_member_array&#39;]?.cast&lt;String&gt;() ?? [];
+  groupAtUserList = json[&#39;message_group_at_user_array&#39;]?.cast&lt;String&gt;() ?? [];
+  senderGroupMemberInfo = V2TimGroupMemberInfo.fromJson(json[&#39;message_sender_group_member_info&#39;] ?? {});
+  nameCard = senderGroupMemberInfo?.nameCard;
+  offlinePushInfo = json[&#39;message_offline_push_config&#39;] != null ? OfflinePushInfo.fromJson(json[&#39;message_offline_push_config&#39;]) : null;
+
+  var jsonElemList = json[&quot;message_elem_array&quot;] ?? List.empty(growable: true);
+  for (int elemIndex = 0; elemIndex &lt; jsonElemList.length; ++elemIndex) {
+    var jsonElem = jsonElemList[elemIndex] as Map&lt;String, dynamic&gt;;
+
+    &#47;&#47; elemType 和 elem 取第一个值作为消息的元素内容
+    int cElemType = jsonElem[&#39;elem_type&#39;] ?? -1;
+    if (cElemType == CElemType.ElemText) {
+      var element = V2TimTextElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_TEXT;
+        textElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemCustom) {
+      var element = V2TimCustomElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_CUSTOM;
+        customElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemImage) {
+      var element = V2TimImageElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_IMAGE;
+        imageElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemSound) {
+      var element = V2TimSoundElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_SOUND;
+        soundElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemVideo)  {
+      var element = V2TimVideoElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_VIDEO;
+        videoElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemFile) {
+      var element = V2TimFileElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_FILE;
+        fileElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemLocation)  {
+      var element = V2TimLocationElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_LOCATION;
+        locationElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemFace)  {
+      var element = V2TimFaceElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_FACE;
+        faceElem = element;
+      }
+
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemGroupTips) {
+      var element = V2TimGroupTipsElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_GROUP_TIPS;
+        groupTipsElem = element;
+      }
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemGroupReport) {
+      var element = V2TimGroupReportElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_GROUP_REPORT;
+        groupReportElem = element;
+      }
+      elemList.add(element);
+    } else if (cElemType == CElemType.ElemMerge)  {
+      var element = V2TimMergerElem.fromJson(jsonElem);
+      if (elemIndex == 0) {
+        elemType = MessageElemType.V2TIM_ELEM_TYPE_MERGER;
+        mergerElem = element;
+      }
+      elemList.add(element);
+    }
+  }
+
+  if (jsonElemList.length == 0)   {
+    elemType = json[&#39;elem_type&#39;] ?? -1;
+  }
+
+  if (elemList.length &gt; 1) {
+    for (int i = 0; i &lt; elemList.length - 1; ++i) {
+      elemList[i].nextElem = elemList[i + 1].toJson();
+    }
+  }
+
+  isForwardMessage = json[&#39;message_is_forward_message&#39;];
+
+  progress = json[&#39;progress&#39;];
+  id = json[&#39;id&#39;];
+  if (msgID == null &amp;&amp; id != null) {
+    msgID = id;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../../models_v2_tim_message/models_v2_tim_message-library.html">v2_tim_message</a></li>
+    <li><a href="../../models_v2_tim_message/V2TimMessage-class.html">V2TimMessage</a></li>
+    <li class="self-crumb">V2TimMessage.fromJson constructor</li>
+</ol>
+
+
+    <h5>V2TimMessage class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the V2TIMConversationManager class from the v2_tim_conversation_manager library, for the Dart programming language.">
+  <title>V2TIMConversationManager class - v2_tim_conversation_manager library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../manager_v2_tim_conversation_manager/manager_v2_tim_conversation_manager-library.html">manager&#47;v2_tim_conversation_manager.dart</a></li>
+    <li class="self-crumb">V2TIMConversationManager class</li>
+  </ol>
+  <div class="self-name">V2TIMConversationManager</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="manager_v2_tim_conversation_manager&#47;manager_v2_tim_conversation_manager-library-sidebar.html"
+    data-below-sidebar="manager_v2_tim_conversation_manager&#47;V2TIMConversationManager-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">V2TIMConversationManager</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>会话接口，包含了会话的获取，删除和更新的逻辑</p>
+<p><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/setConversationListener.html">setConversationListener</a> 设置会话监听器</p>
+<p><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationList.html">getConversationList</a> 获取会话列表</p>
+<p><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/deleteConversation.html">deleteConversation</a> 获取指定会话</p>
+<p><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/setConversationDraft.html">setConversationDraft</a> 删除会话</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="V2TIMConversationManager" class="callable">
+          <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/V2TIMConversationManager.html">V2TIMConversationManager</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addConversationListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/addConversationListener.html">addConversationListener</a></span><span class="signature">(<wbr><span class="parameter" id="addConversationListener-param-listener">{<span>required</span> <span class="type-annotation"><a href="../enum_V2TimConversationListener/V2TimConversationListener-class.html">V2TimConversationListener</a></span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="addConversationsToGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/addConversationsToGroup.html">addConversationsToGroup</a></span><span class="signature">(<wbr><span class="parameter" id="addConversationsToGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="addConversationsToGroup-param-conversationIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  添加会话到一个会话分组
+4.0.8及以后版本支持，web不支持
+  
+
+</dd>
+
+        <dt id="cleanConversationUnreadMessageCount" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/cleanConversationUnreadMessageCount.html">cleanConversationUnreadMessageCount</a></span><span class="signature">(<wbr><span class="parameter" id="cleanConversationUnreadMessageCount-param-conversationID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationID</span>, </span><span class="parameter" id="cleanConversationUnreadMessageCount-param-cleanTimestamp"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">cleanTimestamp</span>, </span><span class="parameter" id="cleanConversationUnreadMessageCount-param-cleanSequence"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">cleanSequence</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="createConversationGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/createConversationGroup.html">createConversationGroup</a></span><span class="signature">(<wbr><span class="parameter" id="createConversationGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="createConversationGroup-param-conversationIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  创建会话分组
+4.0.8及以后版本支持，web不支持
+会话分组最大支持 20 个，不再使用的分组请及时删除。
+  
+
+</dd>
+
+        <dt id="deleteConversation" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/deleteConversation.html">deleteConversation</a></span><span class="signature">(<wbr><span class="parameter" id="deleteConversation-param-conversationID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  删除会话
+  
+
+</dd>
+
+        <dt id="deleteConversationGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/deleteConversationGroup.html">deleteConversationGroup</a></span><span class="signature">(<wbr><span class="parameter" id="deleteConversationGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  删除会话分组
+4.0.8及以后版本支持，web不支持
+  
+
+</dd>
+
+        <dt id="deleteConversationList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/deleteConversationList.html">deleteConversationList</a></span><span class="signature">(<wbr><span class="parameter" id="deleteConversationList-param-conversationIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>, </span><span class="parameter" id="deleteConversationList-param-clearMessage"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">clearMessage</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="deleteConversationsFromGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/deleteConversationsFromGroup.html">deleteConversationsFromGroup</a></span><span class="signature">(<wbr><span class="parameter" id="deleteConversationsFromGroup-param-groupName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="deleteConversationsFromGroup-param-conversationIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从一个会话分组中删除会话
+4.0.8及以后版本支持，web不支持
+  
+
+</dd>
+
+        <dt id="getConversation" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversation.html">getConversation</a></span><span class="signature">(<wbr><span class="parameter" id="getConversation-param-conversationID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationID</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation/V2TimConversation-class.html">V2TimConversation</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取指定会话
+  
+
+</dd>
+
+        <dt id="getConversationGroupList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationGroupList.html">getConversationGroupList</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取会话分组列表
+4.0.8及以后版本支持，web不支持
+  
+
+</dd>
+
+        <dt id="getConversationList" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationList.html">getConversationList</a></span><span class="signature">(<wbr><span class="parameter" id="getConversationList-param-nextSeq">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nextSeq</span>, </span><span class="parameter" id="getConversationList-param-count"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_result/V2TimConversationResult-class.html">V2TimConversationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取会话列表
+  
+
+</dd>
+
+        <dt id="getConversationListByConversaionIds" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationListByConversaionIds.html">getConversationListByConversaionIds</a></span><span class="signature">(<wbr><span class="parameter" id="getConversationListByConversaionIds-param-conversationIDList">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation/V2TimConversation-class.html">V2TimConversation</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  通过会话ID获取指定会话列表
+  
+
+</dd>
+
+        <dt id="getConversationListByFilter" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationListByFilter.html">getConversationListByFilter</a></span><span class="signature">(<wbr><span class="parameter" id="getConversationListByFilter-param-filter">{<span>required</span> <span class="type-annotation"><a href="../models_v2_tim_conversation_filter/V2TimConversationFilter-class.html">V2TimConversationFilter</a></span> <span class="parameter-name">filter</span>, </span><span class="parameter" id="getConversationListByFilter-param-nextSeq"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">nextSeq</span>, </span><span class="parameter" id="getConversationListByFilter-param-count"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_result/V2TimConversationResult-class.html">V2TimConversationResult</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  高级获取会话接口
+  
+
+</dd>
+
+        <dt id="getConversationListWithoutFormat" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getConversationListWithoutFormat.html">getConversationListWithoutFormat</a></span><span class="signature">(<wbr><span class="parameter" id="getConversationListWithoutFormat-param-nextSeq">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nextSeq</span>, </span><span class="parameter" id="getConversationListWithoutFormat-param-count"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-collection/LinkedHashMap-class.html">LinkedHashMap</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取会话不格式化
+  
+
+</dd>
+
+        <dt id="getTotalUnreadMessageCount" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getTotalUnreadMessageCount.html">getTotalUnreadMessageCount</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取会话未读总数
+  
+
+</dd>
+
+        <dt id="getUnreadMessageCountByFilter" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/getUnreadMessageCountByFilter.html">getUnreadMessageCountByFilter</a></span><span class="signature">(<wbr><span class="parameter" id="getUnreadMessageCountByFilter-param-filter">{<span>required</span> <span class="type-annotation"><a href="../models_v2_tim_conversation_filter/V2TimConversationFilter-class.html">V2TimConversationFilter</a></span> <span class="parameter-name">filter</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="markConversation" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/markConversation.html">markConversation</a></span><span class="signature">(<wbr><span class="parameter" id="markConversation-param-markType">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">markType</span>, </span><span class="parameter" id="markConversation-param-enableMark"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableMark</span>, </span><span class="parameter" id="markConversation-param-conversationIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  标记会话
+4.0.8及以后版本支持，web不支持，且应用为旗舰版
+会话分组最大支持 20 个，不再使用的分组请及时删除。
+如果已有标记不能满足您的需求，您可以自定义扩展标记，扩展标记需要满足以下两个条件：
+1、扩展标记值不能和 V2TIMConversation 已有的标记值冲突
+扩展标记值必须是 0x1L &lt;&lt; n 的位移值（32 &lt;= n &lt; 64，即 n 必须大于等于 32 并且小于 64），比如自定义 0x1L &lt;&lt; 32 标记值表示 "iPhone 在线"
+扩展标记值不能设置为 0x1 &lt;&lt; 32，要设置为 0x1L &lt;&lt; 32，明确告诉编译器是 64 位的整型常量
+flutter中使用markType可参考 V2TimConversationMarkType
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pinConversation" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/pinConversation.html">pinConversation</a></span><span class="signature">(<wbr><span class="parameter" id="pinConversation-param-conversationID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationID</span>, </span><span class="parameter" id="pinConversation-param-isPinned"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isPinned</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  会话置顶
+  
+
+</dd>
+
+        <dt id="removeConversationListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/removeConversationListener.html">removeConversationListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeConversationListener-param-listener">{<span class="type-annotation"><a href="../enum_V2TimConversationListener/V2TimConversationListener-class.html">V2TimConversationListener</a>?</span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="renameConversationGroup" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/renameConversationGroup.html">renameConversationGroup</a></span><span class="signature">(<wbr><span class="parameter" id="renameConversationGroup-param-oldName">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldName</span>, </span><span class="parameter" id="renameConversationGroup-param-newName"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newName</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  重命名会话分组
+4.0.8及以后版本支持，web不支持
+  
+
+</dd>
+
+        <dt id="setConversationCustomData" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/setConversationCustomData.html">setConversationCustomData</a></span><span class="signature">(<wbr><span class="parameter" id="setConversationCustomData-param-customData">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">customData</span>, </span><span class="parameter" id="setConversationCustomData-param-conversationIDList"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">conversationIDList</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_value_callback/V2TimValueCallback-class.html">V2TimValueCallback</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_conversation_operation_result/V2TimConversationOperationResult-class.html">V2TimConversationOperationResult</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置会话自定义数据
+  
+
+</dd>
+
+        <dt id="setConversationDraft" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/setConversationDraft.html">setConversationDraft</a></span><span class="signature">(<wbr><span class="parameter" id="setConversationDraft-param-conversationID">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationID</span>, </span><span class="parameter" id="setConversationDraft-param-draftText"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">draftText</span> = <span class="default-value">&quot;&quot;</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置会话草稿
+  
+
+</dd>
+
+        <dt id="setConversationListener" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/setConversationListener.html">setConversationListener</a></span><span class="signature">(<wbr><span class="parameter" id="setConversationListener-param-listener">{<span>required</span> <span class="type-annotation"><a href="../enum_V2TimConversationListener/V2TimConversationListener-class.html">V2TimConversationListener</a></span> <span class="parameter-name">listener</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="subscribeUnreadMessageCountByFilter" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/subscribeUnreadMessageCountByFilter.html">subscribeUnreadMessageCountByFilter</a></span><span class="signature">(<wbr><span class="parameter" id="subscribeUnreadMessageCountByFilter-param-filter">{<span>required</span> <span class="type-annotation"><a href="../models_v2_tim_conversation_filter/V2TimConversationFilter-class.html">V2TimConversationFilter</a></span> <span class="parameter-name">filter</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="unsubscribeUnreadMessageCountByFilter" class="callable">
+  <span class="name"><a href="../manager_v2_tim_conversation_manager/V2TIMConversationManager/unsubscribeUnreadMessageCountByFilter.html">unsubscribeUnreadMessageCountByFilter</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribeUnreadMessageCountByFilter-param-filter">{<span>required</span> <span class="type-annotation"><a href="../models_v2_tim_conversation_filter/V2TimConversationFilter-class.html">V2TimConversationFilter</a></span> <span class="parameter-name">filter</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_v2_tim_callback/V2TimCallback-class.html">V2TimCallback</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">tencent_cloud_chat_sdk</a></li>
+    <li><a href="../manager_v2_tim_conversation_manager/manager_v2_tim_conversation_manager-library.html">v2_tim_conversation_manager</a></li>
+    <li class="self-crumb">V2TIMConversationManager class</li>
+</ol>
+
+
+    <h5>v2_tim_conversation_manager library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    tencent_cloud_chat_sdk
+      8.5.6864+4
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
