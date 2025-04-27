@@ -27,10 +27,19 @@ class V2TimFriendInfo {
     friendRemark = json['friend_profile_remark'];
     friendGroups = json['friend_profile_group_name_array']?.cast<String>();
 
-    List<dynamic>? jsonList = json['friend_profile_custom_string_array'];
-    if (jsonList != null && jsonList.isNotEmpty) {
-      friendCustomInfo = Tools.jsonList2Map<String>(jsonList.whereType<Map<String, dynamic>>().toList(), 'friend_profile_custom_string_info_key', 'friend_profile_custom_string_info_value');
-    }
+    var customInfoList = List<Map<String, dynamic>>.from(json['friend_profile_custom_string_array'] ?? []);
+    // C 接口在获取时没有去掉 "Tag_SNS_Custom_" 前缀。
+    customInfoList = customInfoList.map((item) {
+      final key = item['friend_profile_custom_string_info_key'] as String?;
+      if (key != null && key.startsWith('Tag_SNS_Custom_')) {
+        return {
+          'friend_profile_custom_string_info_key': key.replaceFirst('Tag_SNS_Custom_', ''),
+          'friend_profile_custom_string_info_value': item['friend_profile_custom_string_info_value']
+        };
+      }
+      return item;
+    }).toList();
+    friendCustomInfo = Tools.jsonList2Map<String>(customInfoList, 'friend_profile_custom_string_info_key', 'friend_profile_custom_string_info_value');
 
     userProfile = json['friend_profile_user_profile'] != null
         ? V2TimUserFullInfo.fromJson(json['friend_profile_user_profile'])
@@ -42,7 +51,7 @@ class V2TimFriendInfo {
     data['friend_profile_identifier'] = userID;
     data['friend_profile_remark'] = friendRemark;
     data['friend_profile_group_name_array'] = friendGroups;
-
+    // C 接口已处理有无 "Tag_SNS_Custom_" 前缀的情况，此处不用处理。
     if (friendCustomInfo != null && friendCustomInfo!.isNotEmpty) {
       List<Map<String, dynamic>> customInfoList = Tools.map2JsonList(friendCustomInfo!, 'friend_profile_custom_string_info_key', 'friend_profile_custom_string_info_value');
       data['friend_profile_custom_string_array'] = customInfoList;
@@ -67,7 +76,7 @@ class V2TimFriendInfo {
     }
     if (friendCustomInfo != null) {
       List<Map<String, dynamic>> customInfoList = Tools.map2JsonList(friendCustomInfo!, 'friend_profile_custom_string_info_key', 'friend_profile_custom_string_info_value');
-      data['friend_profile_item_custom_string_array'] = customInfoList;
+      modifyItem['friend_profile_item_custom_string_array'] = customInfoList;
     }
     data['friendship_modify_friend_profile_param_item'] = modifyItem;
 

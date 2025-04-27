@@ -129,6 +129,7 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_value_callback.dart'
 
 import 'tencent_cloud_chat_sdk_method_channel.dart';
 
+/// @nodoc
 abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   /// Constructs a TencentCloudChatSdkPlatform.
   TencentCloudChatSdkPlatform() : super(token: _token);
@@ -1362,7 +1363,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   /// 定向群消息默认不计入群会话的未读计数。
   Future<V2TimValueCallback<V2TimMsgCreateInfoResult>>
       createTargetedGroupMessage(
-          {required String id, required List<String> receiverList}) async {
+          {String? id, required List<String> receiverList}) async {
     throw UnimplementedError("createTextMessage() has not been implemented");
   }
 
@@ -1375,7 +1376,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
 
   /// 3.6.0 新接口统一发送消息实例
   Future<V2TimValueCallback<V2TimMessage>> sendMessage(
-      {required String id,
+      {String? id,
       required String receiver,
       required String groupID,
       int priority = 0,
@@ -1449,7 +1450,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimValueCallback<V2TimMsgCreateInfoResult>> createMergerMessage(
-      {required List<String> msgIDList,
+      {List<String>? msgIDList,
       required String title,
       required List<String> abstractList,
       required String compatibleText,
@@ -1458,7 +1459,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimValueCallback<V2TimMsgCreateInfoResult>> createForwardMessage(
-      {required String msgID, String? webMessageInstance}) async {
+      {String? msgID, String? webMessageInstance}) async {
     throw UnimplementedError("createForwardMessage() has not been implemented");
   }
 
@@ -1656,7 +1657,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   ///
   /// 注意： web不支持该接口
   Future<V2TimCallback> setLocalCustomData({
-    required String msgID,
+    String? msgID,
     required String localCustomData,
   }) async {
     throw UnimplementedError("setLocalCustomData has not been implemented");
@@ -1666,7 +1667,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   ///
   ///web 不支持
   Future<V2TimCallback> setLocalCustomInt({
-    required String msgID,
+    String? msgID,
     required int localCustomInt,
   }) async {
     throw UnimplementedError("setLocalCustomInt has not been implemented");
@@ -1676,8 +1677,8 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   ///
   ///web 不支持
   Future<V2TimCallback> setCloudCustomData({
+    String? msgID,
     required String data,
-    required String msgID,
   }) async {
     throw UnimplementedError("setCloudCustom() has not been implemented");
   }
@@ -1769,7 +1770,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   /// ```
   ///
   Future<V2TimCallback> revokeMessage(
-      {required String msgID, Object? webMessageInstatnce}) async {
+      {String? msgID, Object? webMessageInstatnce}) async {
     throw UnimplementedError("revokeMessage() has not been implemented");
   }
 
@@ -1896,7 +1897,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   /// 注意： web不支持该接口
   ///
   Future<V2TimCallback> deleteMessageFromLocalStorage({
-    required String msgID,
+    String? msgID,
   }) async {
     throw UnimplementedError(
         "deleteMessageFromLocalStorage () has not been implemented");
@@ -1915,7 +1916,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   /// ```
   ///
   Future<V2TimCallback> deleteMessages(
-      {required List<String> msgIDs,
+      {List<String>? msgIDs,
       List<dynamic>? webMessageInstanceList}) async {
     throw UnimplementedError("deleteMessages () has not been implemented");
   }
@@ -2070,14 +2071,14 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimCallback> sendMessageReadReceipts({
-    required List<String> messageIDList,
+    List<String>? messageIDList,
   }) async {
     throw UnimplementedError(
         'sendMessageReadReceipts() has not been implemented.');
   }
 
   Future<V2TimValueCallback<List<V2TimMessageReceipt>>> getMessageReadReceipts({
-    required List<String> messageIDList,
+    List<String>? messageIDList,
   }) async {
     throw UnimplementedError(
         'getMessageReadReceipts() has not been implemented.');
@@ -2085,7 +2086,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
 
   Future<V2TimValueCallback<V2TimGroupMessageReadMemberList>>
       getGroupMessageReadMemberList({
-    required String messageID,
+    String? messageID,
     required GetGroupMessageReadMemberListFilter filter,
     int nextSeq = 0,
     int count = 100,
@@ -2317,28 +2318,27 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimValueCallback<List<V2TimMessage>>> downloadMergerMessage({
-    required String msgID,
+    String? msgID,
   }) async {
     throw UnimplementedError('downloadMergerMessage has not been implemented.');
   }
 
   Future<V2TimValueCallback<List<V2TimMessageExtensionResult>>>
       setMessageExtensions({
-    required String msgID,
+    String? msgID,
     required List<V2TimMessageExtension> extensions,
   }) async {
     throw UnimplementedError('setMessageExtensions has not been implemented.');
   }
 
   Future<V2TimValueCallback<List<V2TimMessageExtension>>> getMessageExtensions({
-    required String msgID,
+    String? msgID,
   }) async {
     throw UnimplementedError('g has not been implemented.');
   }
 
-  Future<V2TimValueCallback<List<V2TimMessageExtensionResult>>>
-      deleteMessageExtensions({
-    required String msgID,
+  Future<V2TimValueCallback<List<V2TimMessageExtensionResult>>> deleteMessageExtensions({
+    String? msgID,
     required List<String> keys,
   }) async {
     throw UnimplementedError(
@@ -2346,7 +2346,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimCallback> downloadMessage({
-    required String msgID,
+    String? msgID,
     required int messageType,
     required int imageType, // 图片类型，仅messageType为图片消息是有效
     required bool isSnapshot, // 是否是视频封面，仅messageType为视频消息是有效
@@ -2356,7 +2356,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
 
   /// 下载多媒体消息到应用目录
   Future<V2TimValueCallback<V2TimMessageOnlineUrl>> getMessageOnlineUrl({
-    required String msgID,
+    String? msgID,
   }) async {
     throw UnimplementedError('downloadMessage has not been implemented.');
   }
@@ -2397,15 +2397,6 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
     String? sourceLanguage,
   }) async {
     throw UnimplementedError('translateText has not been implemented.');
-  }
-
-  Future<V2TimValueCallback<List<String>>> setAvChatRoomCanFindMessage({
-    required List<String> avchatroomIDs,
-    int eachGroupMessageNums = 20,
-  }) async {
-    throw UnimplementedError(
-      'setAvChatRoomCanFindMessage has not been implemented.',
-    );
   }
 
   Future<V2TimCallback> subscribeUserInfo({
@@ -2465,7 +2456,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimCallback> addMessageReaction({
-    required String msgID,
+    String? msgID,
     required String reactionID,
   }) async {
     throw UnimplementedError(
@@ -2474,7 +2465,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimCallback> removeMessageReaction({
-    required String msgID,
+    String? msgID,
     required String reactionID,
   }) async {
     throw UnimplementedError(
@@ -2484,7 +2475,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
 
   Future<V2TimValueCallback<List<V2TimMessageReactionResult>>>
       getMessageReactions({
-    required List<String> msgIDList,
+    List<String>? msgIDList,
     required int maxUserCountPerReaction,
     List<String>? webMessageInstanceList,
   }) async {
@@ -2495,7 +2486,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
 
   Future<V2TimValueCallback<V2TimMessageReactionUserResult>>
       getAllUserListOfMessageReaction({
-    required String msgID,
+    String? msgID,
     required String reactionID,
     required int nextSeq,
     required int count,
@@ -2559,9 +2550,8 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimValueCallback<String>> convertVoiceToText({
-    required String msgID,
-    required String
-        language, // "zh (cmn-Hans-CN)" "yue-Hant-HK" "en-US" "ja-JP",
+    String? msgID,
+    required String language, // "zh (cmn-Hans-CN)" "yue-Hant-HK" "en-US" "ja-JP",
     String? webMessageInstance,
   }) async {
     throw UnimplementedError(
@@ -2702,7 +2692,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimCallback> pinGroupMessage({
-    required String msgID,
+    String? msgID,
     required String groupID,
     required bool isPinned,
   }) async {
@@ -2746,7 +2736,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   Future<V2TimValueCallback<V2TimMessage>> insertGroupMessageToLocalStorageV2({
     required String groupID,
     required String senderID,
-    required String createdMsgID,
+    String? createdMsgID,
   }) async {
     throw UnimplementedError(
       'insertGroupMessageToLocalStorageV2 has not been implemented.',
@@ -2756,7 +2746,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   Future<V2TimValueCallback<V2TimMessage>> insertC2CMessageToLocalStorageV2({
     required String userID,
     required String senderID,
-    required String createdMsgID,
+    String? createdMsgID,
   }) async {
     throw UnimplementedError(
       'insertC2CMessageToLocalStorageV2 has not been implemented.',
@@ -2764,7 +2754,7 @@ abstract class TencentCloudChatSdkPlatform extends PlatformInterface {
   }
 
   Future<V2TimValueCallback<V2TimMessage>> createAtSignedGroupMessage({
-    required String createdMsgID,
+    String? createdMsgID,
     required List<String> atUserList,
   }) {
     throw UnimplementedError(

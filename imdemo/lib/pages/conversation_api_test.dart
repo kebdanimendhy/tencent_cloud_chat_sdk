@@ -135,7 +135,7 @@ class _ConversationAPITestState extends State<ConversationAPITest> {
           .getConversation(
             conversationID: _conversationIDController.text,
           );
-      _addLog('获取会话信息成功: ${result.toJson()}');
+      _addLog('获取会话信息成功: ${result.toLogString()}');
     } catch (e) {
       _addLog('获取会话信息失败: $e');
     }

@@ -5,6 +5,8 @@ import 'package:tencent_cloud_chat_sdk/utils/utils.dart';
 /// {@category Models}
 ///
 class V2TimGroupAtInfo {
+  static String AT_ALL_TAG = "__kImSDK_MesssageAtALL__";
+
   late String seq;
   late int atType;
 

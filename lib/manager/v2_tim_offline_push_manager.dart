@@ -8,16 +8,6 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_offline_push_manage
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_offline_push_manager_dummy.dart';
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 
-/// 提供离线推送相关的接口
-///
-/// [setOfflinePushConfig]设置离线推送配置信息
-///
-/// [doBackground]APP 检测到应用退后台时可以调用此接口，可以用作桌面应用角标的初始化未读数量
-///
-/// [doForeground]APP 检测到应用进前台时可以调用此接口
-///
-/// {@category Manager}
-///
 class V2TIMOfflinePushManager {
   ///   设置离线推送配置信息
   ///

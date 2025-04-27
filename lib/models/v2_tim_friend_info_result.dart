@@ -41,7 +41,7 @@ class V2TimFriendInfoResult {
     return data;
   }
   String toLogString() {
-    String res = "resultCode:$resultCode|resultInfo:$resultInfo|relation:$relation";
+    String res = "resultCode:$resultCode|resultInfo:$resultInfo|relation:$relation|friendInfo:${friendInfo?.toLogString()}";
     return res;
   }
 }

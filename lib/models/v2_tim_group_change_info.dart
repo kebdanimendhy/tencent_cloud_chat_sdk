@@ -5,6 +5,7 @@ import 'package:tencent_cloud_chat_sdk/utils/utils.dart';
 /// {@category Models}
 ///
 class V2TimGroupChangeInfo {
+  /// [GroupChangeInfoType]
   int? type;
   String? value;
   String? key;

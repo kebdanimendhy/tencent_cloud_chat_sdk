@@ -21,6 +21,10 @@ class MessageStatus {
   ///
   static const int V2TIM_MSG_STATUS_HAS_DELETED = 4;
 
+  ///导入到本地的消息
+  ///
+  static const int V2TIM_MSG_STATUS_LOCAL_IMPORTED = 5;
+
   ///被撤销的消息
   ///
   static const int V2TIM_MSG_STATUS_LOCAL_REVOKED = 6;

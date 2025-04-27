@@ -18,19 +18,6 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_conversation_manage
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_conversation_manager_dummy.dart';
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 
-
-/// 会话接口，包含了会话的获取，删除和更新的逻辑
-///
-/// [setConversationListener] 设置会话监听器
-///
-/// [getConversationList] 获取会话列表
-///
-/// [deleteConversation] 删除指定会话
-///
-/// [setConversationDraft] 设置会话草稿
-///
-/// {@category Manager}
-///
 class V2TIMConversationManager {
   Future<void> setConversationListener({
     required V2TimConversationListener listener,
@@ -155,14 +142,12 @@ class V2TIMConversationManager {
     required List<String> conversationIDList,
   }) async {
     if (kIsWeb) {
-      return TencentCloudChatSdkPlatform.instance
-        .getConversationListByConversationIds(
-            conversationIDList: conversationIDList);
+      return TencentCloudChatSdkPlatform.instance.getConversationListByConversationIds(
+          conversationIDList: conversationIDList);
     }
 
-    return TIMConversationManager.instance
-        .getConversationListByConversationIds(
-            conversationIDList: conversationIDList);
+    return TIMConversationManager.instance.getConversationListByConversationIds(
+        conversationIDList: conversationIDList);
   }
 
   /// 高级获取会话接口

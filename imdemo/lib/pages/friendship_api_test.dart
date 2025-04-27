@@ -102,7 +102,7 @@ class _FriendshipAPITestState extends State<FriendshipAPITest> {
       if (result.code == 0) {
         String friendLog = '';
         for (V2TimFriendInfoResult friendInfoResult in result.data!) {
-          friendLog += '${friendInfoResult.toJson()}\n\n';
+          friendLog += '${friendInfoResult.toLogString()}\n\n';
         }
         _addLog('获取指定好友资料: $friendLog');
       } else {
@@ -120,10 +120,11 @@ class _FriendshipAPITestState extends State<FriendshipAPITest> {
       return;
     }
     try {
+      Map<String, String> customInfo = {"Str" : "Str friend value"};
       final result = await TencentImSDKPlugin.v2TIMManager.getFriendshipManager().setFriendInfo(
         userID: _userIDController.text,
         friendRemark: _friendRemarkController.text.isEmpty ? null : _friendRemarkController.text,
-        friendCustomInfo: null,
+        friendCustomInfo: customInfo,
       );
       _addLog('设置指定好友资料成功: ${result.toJson()}');
     } catch (e) {

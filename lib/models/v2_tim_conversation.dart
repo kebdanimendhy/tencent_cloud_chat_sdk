@@ -178,17 +178,3 @@ class V2TimConversation {
     return res;
   }
 }
-// {
-//   "conversationID":"",
-//   "type":0,
-//   "userID":"",
-//   "groupID":"",
-//   "showName":"",
-//   "faceUrl":"",
-//   "groupType":"",
-//   "unreadCount":0,
-//   "lastMessage":{},
-//   "draftText":"",
-//   "draftTimestamp":0,
-//   "groupAtInfoList":[{}]
-// }

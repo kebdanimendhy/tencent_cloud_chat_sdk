@@ -1,3 +1,9 @@
+## 8.5.6864+7
+* Solve the problem that when getting the specified conversation, the conversation object is not returned when the local conversation does not exist.
+* Multiple interfaces in V2TIMMessageManager support passing in V2TimMessage object parameters.
+* Deprecate some interfaces in V2TIMMessageManager, see the documentation for details.
+* Remove the Tag_Profile_Custom_ and Tag_SNS_Custom_ prefixes from custom fields in user and friend profiles.
+
 ## 8.5.6864+6
 * The interface getConversationListByConversaionIds is changed to getConversationListByConversationIds.
 * Solve the 'getConversationListByConversationIds' interface parameter problem.

@@ -39,52 +39,6 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_friendship_manager.
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_friendship_manager_dummy.dart';
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 
-///关系链接口，包含了好友的添加和删除，黑名单的添加和删除等逻辑
-///
-///[setFriendListener]设置关系链监听器
-///
-///[getFriendList]获取好友列表
-///
-///[getFriendsInfo]获取指定好友资料
-///
-///[setFriendInfo]设置指定好友资料
-///
-///[addFriend]添加好友
-///
-///[deleteFromFriendList]删除好友
-///
-///[checkFriend]检查指定用户的好友关系
-///
-///[getFriendApplicationList]获取好友申请列表
-///
-///[acceptFriendApplication]同意好友申请
-///
-///[refuseFriendApplication]拒绝好友申请
-///
-///[deleteFriendApplication]删除好友申请
-///
-///[setFriendApplicationRead]设置好友申请已读
-///
-///[addToBlackList]添加用户到黑名单
-///
-///[deleteFromBlackList]把用户从黑名单中删除
-///
-///[getBlackList]获取黑名单列表
-///
-///[createFriendGroup]新建好友分组
-///
-///[getFriendGroups]获取分组信息
-///
-///[deleteFriendGroup]删除好友分组
-///
-///[renameFriendGroup]修改好友分组的名称
-///
-///[addFriendsToFriendGroup]添加好友到一个好友分组
-///
-///[deleteFriendsFromFriendGroup]从好友分组中删除好友
-///
-///{@category Manager}
-///
 class V2TIMFriendshipManager {
   ///设置关系链监听器
   ///

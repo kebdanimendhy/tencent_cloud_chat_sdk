@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_function_literals_in_foreach_calls
-
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:tencent_cloud_chat_sdk/utils/const.dart';
 
+/// @nodoc
 class Utils {
   static int _uniqueSequence = 0;
   ///@nodoc

@@ -14,24 +14,6 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_signaling_manager.d
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_signaling_manager_dummy.dart';
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 
-/// 提供了信令操作相关接口
-///
-///[addSignalingListener]添加信令监听
-///
-///[removeSignalingListener]移除信令监听
-///
-///[invite]邀请某个人
-///
-///[inviteInGroup]邀请群内的某些人
-///
-///[cancel]邀请方取消邀请
-///
-///[accept]接收方接收邀请
-///
-///[reject]接收方拒绝邀请
-///
-/// {@category Manager}
-///
 class V2TIMSignalingManager {
   ///添加信令监听
   ///

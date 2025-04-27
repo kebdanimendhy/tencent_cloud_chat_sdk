@@ -304,7 +304,7 @@ class _MainAPITestState extends State<MainAPITest> {
     );
     
     if (userInfoRes.code == 0) {
-      _logManager.updateLogText('获取用户资料成功: ${userInfoRes.data?.map((e) => e.toJson()).toList()}');
+      _logManager.updateLogText('获取用户资料成功: ${userInfoRes.data?.map((e) => e.toLogString()).toList()}');
     } else {
       _logManager.updateLogText('获取用户资料失败: ${userInfoRes.code} ${userInfoRes.desc}');
     }
@@ -431,11 +431,13 @@ class _MainAPITestState extends State<MainAPITest> {
   // 设置个人信息
   Future<void> _setSelfInfo() async {
     // 创建用户资料
+    Map<String, String> userCustomMap = {"Str" : "Str value"};
     V2TimUserFullInfo userInfo = V2TimUserFullInfo(
       userID: TencentImSDKPlugin.v2TIMManager.getLoginUser().toString(),
       nickName: _loginUserController.text,
       faceUrl: 'https://example.com/avatar.jpg',  // 示例头像URL
       selfSignature: '这是我的个性签名',
+      customInfo: userCustomMap,
     );
     
     var setInfoRes = await TencentImSDKPlugin.v2TIMManager.setSelfInfo(
@@ -540,6 +542,11 @@ class _MainAPITestState extends State<MainAPITest> {
     } else {
       _logManager.updateLogText('取消订阅用户资料失败: ${unsubscribeRes.code} ${unsubscribeRes.desc}');
     }
+  }
+
+  Future<void> _setTestEnv() async {
+    Map<String, dynamic> param = {"request_set_env_param": true};
+    TencentImSDKPlugin.v2TIMManager.callExperimentalAPI(api: "internal_operation_set_env", param: param);
   }
   
   // 使用全局监听器管理器注册所有监听器

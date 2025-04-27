@@ -7,7 +7,7 @@ import 'package:tencent_cloud_chat_sdk/models/v2_tim_callback.dart'
 import 'package:tencent_cloud_chat_sdk/utils/utils.dart';
 import 'tencent_cloud_chat_sdk_platform_interface.dart';
 
-/// An implementation of [TencentCloudChatSdkPlatform] that uses method channels.
+/// @nodoc
 class MethodChannelTencentCloudChatSdk extends TencentCloudChatSdkPlatform {
   /// The method channel used to interact with the native platform.
   static const _channel = MethodChannel('tencent_cloud_chat_sdk');

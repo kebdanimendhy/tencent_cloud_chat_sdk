@@ -44,11 +44,11 @@ class V2TimMessage {
   String? nameCard;
   /// 群ID，只有群消息才会有
   String? groupID;
-  /// 消息接受者用户ID
+  /// 消息接收者用户ID
   String? userID;
-  /// 消息状态 发送中 成功 失败等
+  /// 消息状态 发送中 成功 失败等 [MessageStatus]
   int? status;
-  /// 消息类型 文本消息 图片消息等
+  /// 消息类型 文本消息 图片消息等 [MessageElemType]
   int elemType = MessageElemType.V2TIM_ELEM_TYPE_NONE;
   /// 文本消息
   V2TimTextElem? textElem;
@@ -495,7 +495,7 @@ class V2TimMessage {
 
   String toLogString() {
     var res =
-        "|msgID:$msgID|seq:$seq|random:$random|isSelf:$isSelf|sender$sender|timestamp:$timestamp|elemType:$elemType|groupID:$groupID|hasRiskContent:$hasRiskContent|isRead:$isRead|isPeerRead:$isPeerRead|cloudCustomData:$cloudCustomData|localCustomData:$localCustomData|offlinePushInfo:${offlinePushInfo?.toLogString()}";
+        "|msgID:$msgID|seq:$seq|random:$random|isSelf:$isSelf|sender:$sender|timestamp:$timestamp|elemType:$elemType|groupID:$groupID|hasRiskContent:$hasRiskContent|isRead:$isRead|isPeerRead:$isPeerRead|isExcludedFromUnreadCount:$isExcludedFromUnreadCount|isExcludedFromLastMessage:$isExcludedFromLastMessage|isSupportMessageExtension:$isSupportMessageExtension|isExcludedFromContentModeration:$isExcludedFromContentModeration|isDisableCloudMessagePreHook:$isDisableCloudMessagePreHook|isDisableCloudMessagePostHook:$isDisableCloudMessagePostHook|cloudCustomData:$cloudCustomData|localCustomData:$localCustomData|offlinePushInfo:${offlinePushInfo?.toLogString()}";
     return res;
   }
 }

@@ -58,6 +58,17 @@ class V2TimUserFullInfo {
       }
     }
     var customInfoList = List<Map<String, dynamic>>.from(json['user_profile_custom_string_array'] ?? []);
+    // C 接口在获取时没有去掉 "Tag_Profile_Custom_" 前缀。
+    customInfoList = customInfoList.map((item) {
+      final key = item['user_profile_custom_string_info_key'] as String?;
+      if (key != null && key.startsWith('Tag_Profile_Custom_')) {
+        return {
+          'user_profile_custom_string_info_key': key.replaceFirst('Tag_Profile_Custom_', ''),
+          'user_profile_custom_string_info_value': item['user_profile_custom_string_info_value']
+        };
+      }
+      return item;
+    }).toList();
     customInfo = Tools.jsonList2Map<String>(
         customInfoList, 'user_profile_custom_string_info_key', 'user_profile_custom_string_info_value');
 
@@ -87,6 +98,7 @@ class V2TimUserFullInfo {
     data['user_profile_self_signature'] = selfSignature;
     data['user_profile_gender'] = gender;
     data['user_profile_add_permission'] = _convert2CFriendAddPermission(allowType ?? AllowType.V2TIM_FRIEND_ALLOW_ANY);
+    // C 接口已处理有无 "Tag_Profile_Custom_" 前缀的情况，此处不用处理。
     if (customInfo != null && customInfo!.isNotEmpty) {
       List<Map<String, dynamic>> customInfoList = Tools.map2JsonList(
           customInfo!, 'user_profile_custom_string_info_key', 'user_profile_custom_string_info_value');
@@ -98,9 +110,9 @@ class V2TimUserFullInfo {
     return data;
   }
 
-  Map<String, dynamic> toSetUserInfoParm() {
+  Map<String, dynamic> toSetUserInfoParam() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (userID != nickName) {
+    if (nickName != null) {
       data['user_profile_item_nick_name'] = nickName;
     }
     if (gender != null) {

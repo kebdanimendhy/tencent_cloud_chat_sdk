@@ -1,5 +1,4 @@
 // ignore_for_file: unused_element, deprecated_member_use_from_same_package, unused_field
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -34,42 +33,6 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_manager.dart'
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 import 'package:tencent_cloud_chat_sdk/utils/const.dart';
 
-/// IM SDK 主核心类，负责 IM SDK 的初始化、登录、消息收发，建群退群等功能。
-///
-///[initSDK] 初始化 SDK
-///
-///[unInitSDK] 反初始化 SDK
-///
-///[login] 登录
-///
-///[logout] 登出
-///
-///[getLoginUser] 获取登录用户
-///
-///[getLoginStatus] 获取登录状态
-///
-///[addSimpleMsgListener] 设置基本消息（文本消息和自定义消息）的事件监听器
-///
-///[removeSimpleMsgListener] 移除基本消息（文本消息和自定义消息）的事件监听器
-///
-///[sendC2CTextMessage] 发送单聊普通文本消息（最大支持 8KB）
-///
-///[sendC2CCustomMessage] 发送单聊自定义（信令）消息（最大支持 8KB）
-///
-///[sendGroupTextMessage] 发送群聊普通文本消息（最大支持 8KB）
-///
-///[sendGroupCustomMessage] 发送群聊自定义（信令）消息（最大支持 8KB）
-///
-///[setGroupListener] 设置群组监听器
-///
-///[createGroup] 创建群组（已弃用）
-///
-///[joinGroup] 加入群组
-///
-///[quitGroup] 退出群组
-///
-///{@category Manager}
-///
 class V2TIMManager {
   static Map<String, String> currentLoginInfo = {};
   static bool addNativeCallback = false;
@@ -131,7 +94,7 @@ class V2TIMManager {
       showImLog: showImLog,
       networkInfo: networkInfo,
     );
-    return V2TimValueCallback<bool>.fromBool(result, '');
+    return V2TimValueCallback<bool>.fromObject(result);
   }
 
   Future<void> emitUIKitEvent(UIKitEvent event) async {
@@ -572,14 +535,10 @@ class V2TIMManager {
     required List<String> userIDList,
   }) async {
     if (kIsWeb) {
-      return TencentCloudChatSdkPlatform.instance.getUsersInfo(
-        userIDList: userIDList,
-      );
+      return TencentCloudChatSdkPlatform.instance.getUsersInfo(userIDList: userIDList);
     }
 
-    return TIMManager.instance.getUsersInfo(
-        userIDList: userIDList,
-      );
+    return TIMManager.instance.getUsersInfo(userIDList: userIDList);
   }
 
   /// 修改个人资料

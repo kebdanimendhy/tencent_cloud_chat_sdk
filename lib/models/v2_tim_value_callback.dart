@@ -67,9 +67,8 @@ class V2TimValueCallback<T> {
 
   _getT<T>() => T;
 
-  V2TimValueCallback.fromBool(bool isSuccess, String desc)  {
+  V2TimValueCallback.fromBool(bool isSuccess, this.desc)  {
     code = isSuccess ? 0 : 1;
-    desc = desc;
   }
 
   V2TimValueCallback.fromObject(T result)  {

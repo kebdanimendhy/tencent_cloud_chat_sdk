@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tencent_cloud_chat_sdk/enum/get_group_message_read_member_list_filter.dart';
 import 'package:tencent_cloud_chat_sdk/enum/history_msg_get_type_enum.dart';
 import 'package:tencent_cloud_chat_sdk/enum/message_elem_type.dart';
+import 'package:tencent_cloud_chat_sdk/enum/message_priority.dart';
 import 'package:tencent_cloud_chat_sdk/enum/message_priority_enum.dart';
 import 'package:tencent_cloud_chat_sdk/enum/receive_message_opt_enum.dart';
 import 'package:tencent_cloud_chat_sdk/enum/v2_tim_keyword_list_match_type.dart';
@@ -32,14 +33,12 @@ class _MessageAPITestState extends State<MessageAPITest> {
   final TextEditingController _receiverIDController = TextEditingController();
   final TextEditingController _groupIDController = TextEditingController();
   final TextEditingController _messageContentController = TextEditingController();
-  final TextEditingController _messageIDController = TextEditingController();
   final TextEditingController _customDataController = TextEditingController();
   final TextEditingController _messageTypeController = TextEditingController();
   final TextEditingController _conversationIDController = TextEditingController();
   // 拉取历史消息参数
   final TextEditingController _countHistoryController = TextEditingController(text: '20');
   final TextEditingController _lastMsgIDHistoryController = TextEditingController();
-  final TextEditingController _lastMsgTimeHistoryController = TextEditingController();
   final TextEditingController _userIDHistoryController = TextEditingController();
   final TextEditingController _groupIDHistoryController = TextEditingController();
   final TextEditingController _lastMsgSeqHistoryController = TextEditingController();
@@ -125,22 +124,33 @@ class _MessageAPITestState extends State<MessageAPITest> {
       );
 
       if (createResult.code != 0) {
-        _addLog('创建文本消息失败: ${createResult.toJson()}');
+        _addLog('创建文本消息失败: ${createResult.toLogString()}');
         return;
       }
+
+      V2TimMessage? createMessage = createResult.data?.messageInfo!;
+      createMessage!.needReadReceipt = true;
+      createMessage.isSupportMessageExtension = true;
       
       // 发送创建的消息
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().sendMessage(
-        id: createResult.data?.id ?? '',
+        message: createMessage!,
+        onSyncMsgID: (String msgID) {
+          _addLog('sendMessage onSyncMsgID: $msgID');
+        },
         receiver: _receiverIDController.text,
         groupID: _groupIDController.text,
         priority: MessagePriorityEnum.V2TIM_PRIORITY_NORMAL,
-        needReadReceipt: true,
-        isSupportMessageExtension: true,
+        onlineUserOnly: false,
+        offlinePushInfo: null,
       );
-      _addLog('发送文本消息成功: ${result.toJson()}');
+      if (result.code == 0) {
+        _addLog('发送文本消息成功: ${result.toLogString()}\n');
+      } else {
+        _addLog('发送文本消息失败: ${result.toLogString()}\n');
+      }
     } catch (e) {
-      _addLog('发送文本消息失败: $e');
+      _addLog('发送文本消息失败: $e\n');
     }
   }
 
@@ -163,7 +173,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       );
       
       if (createResult.code != 0) {
-        _addLog('创建自定义消息失败: ${createResult.toJson()}');
+        _addLog('创建自定义消息失败: ${createResult.toLogString()}');
         return;
       }
       
@@ -176,7 +186,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
         needReadReceipt: true,
         isSupportMessageExtension: true,
       );
-      _addLog('发送自定义消息成功: ${result.toJson()}');
+      _addLog('发送自定义消息成功: ${result.toLogString()}');
     } catch (e) {
       _addLog('发送自定义消息失败: $e');
     }
@@ -200,7 +210,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       );
       
       if (createResult.code != 0) {
-        _addLog('创建表情消息失败: ${createResult.toJson()}');
+        _addLog('创建表情消息失败: ${createResult.toLogString()}');
         return;
       }
       
@@ -213,7 +223,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
         needReadReceipt: true,
         isSupportMessageExtension: true,
       );
-      _addLog('发送表情消息成功: ${result.toJson()}');
+      _addLog('发送表情消息成功: ${result.toLogString()}');
     } catch (e) {
       _addLog('发送表情消息失败: $e');
     }
@@ -240,7 +250,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       );
       
       if (createResult.code != 0) {
-        _addLog('创建位置消息失败: ${createResult.toJson()}');
+        _addLog('创建位置消息失败: ${createResult.toLogString()}');
         return;
       }
       
@@ -253,7 +263,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
         needReadReceipt: true,
         isSupportMessageExtension: true,
       );
-      _addLog('发送位置消息成功: ${result.toJson()}');
+      _addLog('发送位置消息成功: ${result.toLogString()}');
     } catch (e) {
       _addLog('发送位置消息失败: $e');
     }
@@ -265,6 +275,12 @@ class _MessageAPITestState extends State<MessageAPITest> {
       _addLog('请输入获取消息数量');
       return;
     }
+
+    V2TimMessage? lastMessage;
+    if (_messageList.isNotEmpty) {
+      lastMessage = _messageList.last;
+    }
+
     try {
       V2TimValueCallback<V2TimMessageListResult> result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().getHistoryMessageListV2(
         getType: HistoryMsgGetTypeEnum.V2TIM_GET_LOCAL_OLDER_MSG,
@@ -272,7 +288,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
         groupID: _groupIDHistoryController.text.isEmpty ? null : _groupIDHistoryController.text,
         lastMsgSeq: _lastMsgSeqHistoryController.text.isEmpty ? -1 : int.parse(_lastMsgSeqHistoryController.text),
         count: int.parse(_countHistoryController.text),
-        lastMsgID: _lastMsgIDHistoryController.text.isEmpty ? null : _lastMsgIDHistoryController.text,
+        lastMsg: lastMessage,
         messageTypeList: _messageTypeListHistoryController.text.isEmpty ? null :
           _messageTypeListHistoryController.text.split(',').map((e) => int.parse(e)).toList(),
         messageSeqList: _messageSeqListHistoryController.text.isEmpty ? null :
@@ -295,34 +311,22 @@ class _MessageAPITestState extends State<MessageAPITest> {
     }
   }
 
-  // 删除消息
-  Future<void> _deleteMessage() async {
-    if (_messageIDController.text.isEmpty) {
-      _addLog('请输入消息ID');
-      return;
-    }
-    try {
-      final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().deleteMessages(
-        msgIDs: [_messageIDController.text],
-      );
-      _addLog('删除消息: ${result.toJson()}');
-    } catch (e) {
-      _addLog('删除消息失败: $e');
-    }
-  }
-
   // 撤回消息
   Future<void> _revokeMessage() async {
-    if (_messageIDController.text.isEmpty) {
-      _addLog('请输入消息ID');
+    V2TimMessage? lastMessage;
+    if (_messageList.isNotEmpty) {
+      lastMessage = _messageList.first;
+    } else {
+      _addLog('请先获取历史消息，会撤回最新一条消息');
       return;
     }
+
     try {
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().revokeMessage(
-        msgID: _messageIDController.text,
+        message: lastMessage,
       );
 
-      _addLog('撤回消息: ${result.toJson()}');
+      _addLog('撤回消息: ${result.toLogString()}');
     } catch (e) {
       _addLog('撤回消息失败: $e');
     }
@@ -341,7 +345,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       );
       
       if (createResult.code != 0) {
-        _addLog('创建图片消息失败: ${createResult.toJson()}');
+        _addLog('创建图片消息失败: ${createResult.toLogString()}');
         return;
       }
       
@@ -483,7 +487,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
     try {
       // 先创建合并消息
       final createResult = await TencentImSDKPlugin.v2TIMManager.getMessageManager().createMergerMessage(
-        msgIDList: [_messageList[0].msgID ?? "", _messageList[1].msgID ?? ""], // 使用前两条消息
+        messageList: [_messageList[0], _messageList[1]], // 使用前两条消息
         title: '合并消息标题',
         abstractList: ['摘要1', '摘要2'],
         compatibleText: "合并消息",
@@ -493,15 +497,19 @@ class _MessageAPITestState extends State<MessageAPITest> {
         _addLog('创建合并消息失败: ${createResult.toJson()}');
         return;
       }
+
+      V2TimMessage? createMessage = createResult.data?.messageInfo!;
+      createMessage!.needReadReceipt = true;
+      createMessage.isSupportMessageExtension = true;
       
       // 发送创建的消息
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().sendMessage(
-        id: createResult.data?.id ?? '',
+        message: createMessage!,
+        onSyncMsgID: (String msgID) {
+          _addLog('sendMessage onSyncMsgID: $msgID');
+        },
         receiver: _receiverIDController.text,
         groupID: _groupIDController.text,
-        priority: MessagePriorityEnum.V2TIM_PRIORITY_NORMAL,
-        needReadReceipt: true,
-        isSupportMessageExtension: true,
       );
       _addLog('发送合并消息成功: ${result.toJson()}');
     } catch (e) {
@@ -522,24 +530,33 @@ class _MessageAPITestState extends State<MessageAPITest> {
     try {
       // 先创建转发消息
       final createResult = await TencentImSDKPlugin.v2TIMManager.getMessageManager().createForwardMessage(
-        msgID: _messageList[0].msgID ?? "", // 使用第一条消息
+        message: _messageList[0], // 使用第一条消息
       );
       
       if (createResult.code != 0) {
         _addLog('创建转发消息失败: ${createResult.toJson()}');
         return;
       }
-      
+
+      V2TimMessage? createMessage = createResult.data?.messageInfo!;
+      createMessage!.needReadReceipt = true;
+      createMessage.isSupportMessageExtension = true;
+
       // 发送创建的消息
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().sendMessage(
-        id: createResult.data?.id ?? '',
+        message: createResult.data?.messageInfo,
+        onSyncMsgID: (String msgID) {
+          _addLog('sendMessage onSyncMsgID: $msgID');
+        },
         receiver: _receiverIDController.text,
         groupID: _groupIDController.text,
-        priority: MessagePriorityEnum.V2TIM_PRIORITY_NORMAL,
-        needReadReceipt: true,
-        isSupportMessageExtension: true,
       );
-      _addLog('发送转发消息成功: ${result.toJson()}');
+
+      if (result.code == 0) {
+        _addLog('发送转发消息成功: ${result.toLogString()}');
+      } else {
+        _addLog('发送转发消息失败: ${result.toLogString()}');
+      }
     } catch (e) {
       _addLog('发送转发消息失败: $e');
     }
@@ -784,7 +801,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
     }
     try {
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().deleteMessageFromLocalStorage(
-        msgID: _messageList[0].msgID ?? "",
+        message: _messageList[0],
       );
       _addLog('从本地存储删除消息: ${result.toJson()}');
     } catch (e) {
@@ -800,7 +817,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
     }
     try {
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().deleteMessages(
-        msgIDs: [_messageList[0].msgID ?? ""],
+        messageList: [_messageList[0]],
       );
       _addLog('删除消息成功: ${result.toJson()}');
     } catch (e) {
@@ -835,7 +852,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().insertGroupMessageToLocalStorageV2(
         groupID: _groupIDController.text,
         senderID: loginUserResult.data ?? '',
-        createdMsgID: createResult.data?.id ?? '',
+        message: createResult.data?.messageInfo,
       );
       _addLog('向群组消息列表中添加消息成功: ${result.toJson()}');
     } catch (e) {
@@ -870,7 +887,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
       final result = await TencentImSDKPlugin.v2TIMManager.getMessageManager().insertC2CMessageToLocalStorageV2(
         userID: _userIDHistoryController.text,
         senderID: loginUserResult.data ?? '',
-        createdMsgID: createResult.data?.id ?? '',
+        message: createResult.data?.messageInfo,
       );
       _addLog('向C2C消息列表中添加消息成功: ${result.toJson()}');
     } catch (e) {
@@ -1354,27 +1371,6 @@ class _MessageAPITestState extends State<MessageAPITest> {
               ],
             ),
           ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('消息ID:', style: TextStyle(fontSize: 12)),
-                SizedBox(
-                  height: 30,
-                  child: TextField(
-                    controller: _messageIDController,
-                    style: const TextStyle(fontSize: 13),
-                    decoration: const InputDecoration(
-                      hintText: '请输入消息ID',
-                      contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
       ),
       const SizedBox(height: 4),
@@ -1570,55 +1566,7 @@ class _MessageAPITestState extends State<MessageAPITest> {
         ],
       ),
       const SizedBox(height: 4),
-      
-      // 最后消息ID和最后消息时间输入框
-      Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('最后消息ID:', style: TextStyle(fontSize: 12)),
-                SizedBox(
-                  height: 30,
-                  child: TextField(
-                    controller: _lastMsgIDHistoryController,
-                    style: const TextStyle(fontSize: 13),
-                    decoration: const InputDecoration(
-                      hintText: '请输入最后一条消息ID(可选)',
-                      contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text('最后消息时间:', style: TextStyle(fontSize: 12)),
-                SizedBox(
-                  height: 30,
-                  child: TextField(
-                    controller: _lastMsgTimeHistoryController,
-                    style: const TextStyle(fontSize: 13),
-                    decoration: const InputDecoration(
-                      hintText: '请输入最后一条消息时间戳(可选)',
-                      contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      const SizedBox(height: 4),
-      
+
       // 用户ID和群组ID输入框
       Row(
         children: [
@@ -2042,13 +1990,11 @@ class _MessageAPITestState extends State<MessageAPITest> {
     _receiverIDController.dispose();
     _groupIDController.dispose();
     _messageContentController.dispose();
-    _messageIDController.dispose();
     _customDataController.dispose();
     _messageTypeController.dispose();
     _conversationIDController.dispose();
     _countHistoryController.dispose();
     _lastMsgIDHistoryController.dispose();
-    _lastMsgTimeHistoryController.dispose();
     _userIDHistoryController.dispose();
     _groupIDHistoryController.dispose();
     _lastMsgSeqHistoryController.dispose();

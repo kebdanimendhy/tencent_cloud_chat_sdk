@@ -1062,7 +1062,7 @@ class TencentCloudChatSdkWeb extends TencentCloudChatSdkPlatform {
   /// 3.6.0 新接口统一发送消息实例
   @override
   Future<V2TimValueCallback<V2TimMessage>> sendMessage(
-      {required String id,
+      {String? id,
       required String receiver,
       required String groupID,
       int priority = 0,

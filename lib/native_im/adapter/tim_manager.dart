@@ -364,7 +364,7 @@ class TIMManager {
     Completer<V2TimCallback> completer = Completer();
     NativeLibraryManager.timCallback2Future(userData, completer);
 
-    Pointer<Char> pSetParam = Tools.string2PointerChar(json.encode(userFullInfo.toSetUserInfoParm()));
+    Pointer<Char> pSetParam = Tools.string2PointerChar(json.encode(userFullInfo.toSetUserInfoParam()));
     Pointer<Void> pUserData = Tools.string2PointerVoid(userData);
     NativeLibraryManager.bindings.DartSetSelfInfo(pSetParam, pUserData);
 
@@ -378,7 +378,6 @@ class TIMManager {
     String userData = Tools.generateUserData('callExperimentalAPI');
     Completer<V2TimValueCallback<Object>> completer = Completer();
     NativeLibraryManager.timValueCallback2Future<Object>(userData, completer);
-
 
     Map<String, dynamic> cJsonParam = {};
     if (param is Map<String, dynamic>) {

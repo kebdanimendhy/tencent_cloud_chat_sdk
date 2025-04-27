@@ -63,7 +63,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span>
 <span class="name ">DartSendMessage</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="DartSendMessage-param-conv_id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">conv_id</span>, </span></li>
 <li><span class="parameter" id="DartSendMessage-param-conv_type"><span class="type-annotation"><a href="../../native_im_bindings_native_imsdk_bindings_generated/TIMConvType.html">TIMConvType</a></span> <span class="parameter-name">conv_type</span>, </span></li>
 <li><span class="parameter" id="DartSendMessage-param-json_msg_param"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ffi/Char-class.html">Char</a></span>&gt;</span></span> <span class="parameter-name">json_msg_param</span>, </span></li>
@@ -82,7 +82,7 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">int DartSendMessage(
+  <pre class="language-dart"><code class="language-dart">ffi.Pointer&lt;ffi.Char&gt; DartSendMessage(
   ffi.Pointer&lt;ffi.Char&gt; conv_id,
   TIMConvType conv_type,
   ffi.Pointer&lt;ffi.Char&gt; json_msg_param,
@@ -128,7 +128,7 @@
 <footer>
   <span class="no-break">
     tencent_cloud_chat_sdk
-      8.5.6864+4
+      8.5.6864-beta.7
   </span>
 
   

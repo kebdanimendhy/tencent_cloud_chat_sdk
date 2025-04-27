@@ -123,6 +123,18 @@ class TIMConversationManager {
     void handleApiCallback (Map jsonResult) {
       V2TimValueCallback<List<V2TimConversation>> result = V2TimValueCallback.fromJson(jsonResult);
       V2TimConversation? conversation = result.data!.isNotEmpty ? result.data![0] : null;
+      // C 接口 TIMConvGetConvInfo 底层调用的是 GetConversationInfoList 接口，本地不存在的会话不会创建。
+      // 因此这里如果底层没有的话，在上层创建一个会话对象来暂时规避此问题。
+      if (conversation == null) {
+        conversation = V2TimConversation(conversationID: conversationID);
+        conversation.type = cConversationType.value;
+        if (cConversationType == TIMConvType.kTIMConv_C2C) {
+          conversation.userID = cConversationID;
+        } else if (cConversationType == TIMConvType.kTIMConv_Group) {
+          conversation.groupID = cConversationID;
+        }
+      }
+
       completer.complete(V2TimValueCallback<V2TimConversation>(code: result.code, desc: result.desc, data: conversation));
     }
     NativeLibraryManager.timApiValueCallback2Future(userData, handleApiCallback);

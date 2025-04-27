@@ -167,7 +167,8 @@
   Pointer&lt;Char&gt; pConvID = Tools.string2PointerChar(convID);
   Pointer&lt;Char&gt; pMsgParam = Tools.string2PointerChar(json.encode(v2timMessage.toJson()));
   Pointer&lt;Void&gt; pUserData = Tools.string2PointerVoid(userData);
-  NativeLibraryManager.bindings.DartSendMessage(pConvID, timConvType, pMsgParam, pUserData);
+  Pointer&lt;Char&gt; pMessageID = NativeLibraryManager.bindings.DartSendMessage(pConvID, timConvType, pMsgParam, pUserData);
+  String messageIDDart = Tools.pointerChar2String(pMessageID);
 
   &#47;&#47; 转发消息给多个人的时候，会重复使用一个 id
   &#47;&#47; messageIDMap.remove(id);
@@ -207,7 +208,7 @@
 <footer>
   <span class="no-break">
     tencent_cloud_chat_sdk
-      8.5.6864+4
+      8.5.6864-beta.7
   </span>
 
   

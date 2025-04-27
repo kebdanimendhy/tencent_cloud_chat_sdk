@@ -16,17 +16,18 @@ import 'v2_tim_group_member_info.dart';
 ///
 class V2TimGroupTipsElem extends V2TIMElem {
   late String groupID;
+  /// [GroupTipsElemType]
   late int type;
-  // 操作者成员信息
+  /// 操作者成员信息
   late V2TimGroupMemberInfo opMember;
-  // 被操作者成员列表
+  /// 被操作者成员列表
   List<V2TimGroupMemberInfo?>? memberList = List.empty(growable: true);
-  // 群资料变更信息列表
+  /// 群资料变更信息列表
   List<V2TimGroupChangeInfo?>? groupChangeInfoList = List.empty(growable: true);
-  // 群成员变更信息列表
+  /// 群成员变更信息列表
   List<V2TimGroupMemberChangeInfo?>? memberChangeInfoList =
       List.empty(growable: true);
-  // 当前群成员数
+  /// 当前群成员数
   late int? memberCount;
 
   // imsdk 底层的 tipsType

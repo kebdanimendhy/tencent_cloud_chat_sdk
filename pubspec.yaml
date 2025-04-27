@@ -1,6 +1,6 @@
 name: tencent_cloud_chat_sdk
 description: Tencent Cloud Chat SDK. Globally interconnected In-App Chat, user profile and relationship chains and offline push.
-version: 8.5.6864+6
+version: 8.5.6864+7
 homepage: https://cloud.tencent.com/document/product/269
 documentation: https://pub.dev/documentation/tencent_cloud_chat_sdk/latest/
 repository: https://pub.dev/packages/tencent_cloud_chat_sdk

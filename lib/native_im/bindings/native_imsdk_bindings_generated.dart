@@ -571,7 +571,7 @@ class NativeImsdkBindings {
           void Function(ffi.Pointer<ffi.Void>)>();
 
   /// 消息收发
-  int DartSendMessage(
+  ffi.Pointer<ffi.Char> DartSendMessage(
     ffi.Pointer<ffi.Char> conv_id,
     TIMConvType conv_type,
     ffi.Pointer<ffi.Char> json_msg_param,
@@ -587,14 +587,14 @@ class NativeImsdkBindings {
 
   late final _DartSendMessagePtr = _lookup<
       ffi.NativeFunction<
-          ffi.Int Function(
+          ffi.Pointer<ffi.Char> Function(
               ffi.Pointer<ffi.Char>,
               ffi.UnsignedInt,
               ffi.Pointer<ffi.Char>,
               ffi.Pointer<ffi.Void>)>>('DartSendMessage');
   late final _DartSendMessage = _DartSendMessagePtr.asFunction<
-      int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>,
-          ffi.Pointer<ffi.Void>)>();
+      ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>, int,
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Void>)>();
 
   int DartDownloadElemToPath(
     ffi.Pointer<ffi.Char> json_download_elem_param,
@@ -4199,7 +4199,7 @@ enum TIMErrCode {
   /// 无错误。
   ERR_SUCC(0),
 
-  /// 执行中，请做好接口调用控制，例如，第一次初始化操作在回调前，后续的初始化操作会返回该错误码。
+  /// 接口正在执行中，请您在收到回调之后，再次发起对当前接口的调用，即采用串行方式调用接口。
   ERR_IN_PROGESS(6015),
 
   /// 参数无效，请检查参数是否符合要求，具体可查看错误信息进一步定义哪个字段。

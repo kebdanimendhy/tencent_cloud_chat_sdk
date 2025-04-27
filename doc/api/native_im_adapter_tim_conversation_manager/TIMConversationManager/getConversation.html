@@ -104,6 +104,18 @@
   void handleApiCallback (Map jsonResult) {
     V2TimValueCallback&lt;List&lt;V2TimConversation&gt;&gt; result = V2TimValueCallback.fromJson(jsonResult);
     V2TimConversation? conversation = result.data!.isNotEmpty ? result.data![0] : null;
+    &#47;&#47; C 接口 TIMConvGetConvInfo 底层调用的是 GetConversationInfoList 接口，本地不存在的会话不会创建。
+    &#47;&#47; 因此这里如果底层没有的话，在上层创建一个会话对象来暂时规避此问题。
+    if (conversation == null) {
+      conversation = V2TimConversation(conversationID: conversationID);
+      conversation.type = cConversationType.value;
+      if (cConversationType == TIMConvType.kTIMConv_C2C) {
+        conversation.userID = cConversationID;
+      } else if (cConversationType == TIMConvType.kTIMConv_Group) {
+        conversation.groupID = cConversationID;
+      }
+    }
+
     completer.complete(V2TimValueCallback&lt;V2TimConversation&gt;(code: result.code, desc: result.desc, data: conversation));
   }
   NativeLibraryManager.timApiValueCallback2Future(userData, handleApiCallback);
@@ -152,7 +164,7 @@
 <footer>
   <span class="no-break">
     tencent_cloud_chat_sdk
-      8.5.6864+4
+      8.5.6864-beta.7
   </span>
 
   

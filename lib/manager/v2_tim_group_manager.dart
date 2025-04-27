@@ -1,5 +1,4 @@
 // ignore_for_file: unused_field
-
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -45,61 +44,13 @@ import 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_group_manager.dart'
     if (dart.library.html) 'package:tencent_cloud_chat_sdk/native_im/adapter/tim_group_manager_dummy.dart';
 import 'package:tencent_cloud_chat_sdk/tencent_cloud_chat_sdk_platform_interface.dart';
 
-/// 群组高级接口，包含了群组的高级功能，例如群成员邀请、非群成员申请进群等操作接口。
-///
-///[createGroup]创建自定义群组（高级版本：可以指定初始的群成员）
-///
-///[getJoinedGroupList]获取当前用户已经加入的群列表
-///
-///[getGroupsInfo]拉取群资料
-///
-///[setGroupInfo]修改群资料
-///
-///[setReceiveMessageOpt]修改群消息接收选项
-///
-///[initGroupAttributes]初始化群属性，会清空原有的群属性列表
-///
-///[setGroupAttributes]设置群属性。已有该群属性则更新其 value 值，没有该群属性则添加该属性。
-///
-///[deleteGroupAttributes]删除指定群属性，keys 传 null 则清空所有群属性。
-///
-///[getGroupAttributes]获取指定群属性，keys 传 null 则获取所有群属性。
-///
-///[getGroupMemberList]获取群成员列表
-///
-///[getGroupMembersInfo]获取指定的群成员资料
-///
-///[setGroupMemberInfo]修改指定的群成员资料
-///
-///[muteGroupMember]禁言（只有管理员或群主能够调用）
-///
-///[inviteUserToGroup]邀请他人入群
-///
-///[kickGroupMember]踢人
-///
-///[setGroupMemberRole]切换群成员的角色。
-///
-///[transferGroupOwner]转让群主
-///
-///[getGroupApplicationList]获取加群的申请列表
-///
-///[acceptGroupApplication]同意某一条加群申请
-///
-///[refuseGroupApplication]拒绝某一条加群申请
-///
-///[setGroupApplicationRead]标记申请列表为已读
-///
-///[searchGroupByID] 通过群ID搜索群信息
-///
-/// {@category Manager}
-///
 class V2TIMGroupManager {
   ///创建自定义群组（高级版本：可以指定初始的群成员）
   ///
   /// 参数
   ///
   /// ```
-  /// info	自定义群组信息，可以设置 groupID | groupType | groupName | notification | introduction | faceURL 字段
+  /// info  自定义群组信息，可以设置 groupID | groupType | groupName | notification | introduction | faceURL 字段
   /// memberList	指定初始的群成员（直播群 AVChatRoom 不支持指定初始群成员，memberList 请传 null）
   /// ```
   ///
@@ -214,33 +165,6 @@ class V2TIMGroupManager {
     }
     return TIMGroupManager.instance.setGroupInfo(info: info);
   }
-
-  /// 这个接口移到messageManager下面去了，2020-6-4
-  /// 修改群消息接收选项
-  ///
-  /// 参数
-  ///
-  /// ```
-  /// opt	三种类型的消息接收选项： ReceiveMsgOptEnum.V2TIM_GROUP_RECEIVE_MESSAGE：在线正常接收消息，离线时会有厂商的离线推送通知 ReceiveMsgOptEnum.V2TIM_GROUP_NOT_RECEIVE_MESSAGE：不会接收到群消息 ReceiveMsgOptEnum.V2TIM_GROUP_RECEIVE_NOT_NOTIFY_MESSAGE：在线正常接收消息，离线不会有推送通知
-  /// ```
-  // Future<V2TimCallback> setReceiveMessageOpt({
-  //   required String groupID,
-  //   required int opt,
-  // }) async {
-  //   return V2TimCallback.fromJson(
-  //     formatJson(
-  //       await _channel.invokeMethod(
-  //         "setReceiveMessageOpt",
-  //         buildParam(
-  //           {
-  //             "groupID": groupID,
-  //             "opt": opt,
-  //           },
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   /// 初始化群属性，会清空原有的群属性列表
   ///
